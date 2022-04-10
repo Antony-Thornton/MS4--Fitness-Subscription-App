@@ -340,8 +340,21 @@ See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" 
 10. In the terminal type mkfir templates and then mkdir templates/allauth
 11. Commit changes to github
 
+### Creating html templates
+1. In the terminal type "cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/"
+    * To check python version type "python --version" in the terminal as it has to match
+    * -r means copy everything
+2. Delete any templates you dont plan to change
+    * For this I deleted; "OpenID" and "tests"
+3. Add a base.html file under the "/templates/allauth" folder path
+4. In the base.html file you can either create your own or copy in a template
+    * For this I will be using <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap5 </a>
+5. Add another meta tag - < meta http-equiv="X-UA-Compatible" content="ie=edge" >
+    * This will support older internet explorer windows
+6. Move the scripts to the top header
+7. Add "{% load static %}" to the very top of the page 
+8. Block off the header sections for extra functionality
 
-    
 
 
 
