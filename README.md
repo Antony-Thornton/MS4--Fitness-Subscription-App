@@ -241,19 +241,37 @@ All Pages:
 
 A Code Insititute template can be found <a href="https://github.com/Code-Institute-Org/gitpod-full-template">here</a>.
 
-* Setting up a new repository. 
-    1. Go to the link above and click use this template
-    2. Name it as required and select include all branches
-    3. Click create new repository
-    4. Click on the green gitpod button
-    5. Navigate to <a href="https://gitpod.io/workspaces">gitpod workspaces</a> and pin the workspace
-    6. Use this link to continue working in that environment
+### Setting up a new repository. 
+1. Go to the link above and click use this template
+2. Name it as required and select include all branches
+3. Click create new repository
+4. Click on the green gitpod button
+5. Navigate to <a href="https://gitpod.io/workspaces">gitpod workspaces</a> and pin the workspace
+6. Use this link to continue working in that environment
 
 
-* Install Django
-    1. In the terminal type in "pip3 install Django"
-    2. 
+### Install Django
+1. In the terminal type in "pip3 install Django"
+2. Once installed type in "django-admin startproject fitness_subscription_app ."
+    * change "fitness_subscription_app" to whatever you want to call it
+    * This will create all your python files
 
+
+### .gitignore file
+1. Add *.sqlite3
+2. Add *.pyc
+3. Add __pycache__
+
+* Test the django environment
+    1. In the terminal type "python3 manage.py runserver"
+    * You may need to expose pot 8000
+        * You should see a message as per below
+
+![index web](static/assets/images/development_cycle/django_success.jpg)
+
+
+* Python Migrations
+    1. Type into 
 
 * Install supporting python libraries
     * Install PyMongo and Flask.
