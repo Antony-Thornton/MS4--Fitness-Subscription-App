@@ -336,7 +336,11 @@ See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" 
     * this should take you to a log in page
 8. Log in with the details of the user you created
     * If it worked it should redirect to a page with "/success" at the end
-    
+9. In the terminal type in "pip3 freeze > requirements.txt"
+10. In the terminal type mkfir templates and then mkdir templates/allauth
+11. Commit changes to github
+
+
     
 
 
