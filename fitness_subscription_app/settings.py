@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'allauth',
-    'allauth.account', # Log in and out, password resets etc
-    'allauth.socialaccount', # Logging in with social media
+    'allauth.account',  # Log in and out, password resets etc
+    'allauth.socialaccount',  # Logging in with social media
 ]
 
 MIDDLEWARE = [
@@ -63,7 +63,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # Required by allauth
+                'django.template.context_processors.request',  # Required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -81,8 +81,17 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-WSGI_APPLICATION = 'fitness_subscription_app.wsgi.application'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'  # Log in using either email or username
+ACCOUNT_EMAIL_REQUIRED = True  # Email needed
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True  # Avoid typos
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'  # The login URL
+LOGIN_REDIRECT_URL = '/'  # Where to go back to when logged in. In the course this was'/success'
+
+WSGI_APPLICATION = 'fitness_subscription_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases

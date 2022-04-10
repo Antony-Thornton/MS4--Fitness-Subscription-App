@@ -251,7 +251,10 @@ A Code Insititute template can be found <a href="https://github.com/Code-Institu
 
 
 ### Install Django
-1. In the terminal type in "pip3 install Django"
+
+Note: I had an issue with versions of django (installed 4 but should have been 3.22) see below for details.
+ ![index web](static/assets/images/development_cycle/django_admin_login_error_fix.jpg)
+1. In the terminal type in "pip3 install Django" May need to specify version here.
 2. Once installed type in "django-admin startproject fitness_subscription_app ."
     * change "fitness_subscription_app" to whatever you want to call it
     * This will create all your python files
@@ -284,7 +287,7 @@ A Code Insititute template can be found <a href="https://github.com/Code-Institu
     * You should get a creation successful message
     
 
-### Install Django Allauth 
+### Install Django Allauth Part 1
 
 See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" target="_blank">here</a> for details.
 
@@ -317,7 +320,25 @@ See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" 
 
         ![index web](static/assets/images/development_cycle/django_admin_login_error_fix.jpg)
 
-3. Change domain Name
+3. Change domain Name in the sites section of the admin page (I had a bug here. See known bugs section for details on fix)
+    * I went with "fsa.example.com" and "Fitness Subsription App" for this project
+4. Log out and quit server
+
+
+### Install Django Allauth Part 2
+1. In urls.py file add / to the end of the path('accounts/') line
+2. in settings.py add " EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' " under "SITE_ID"
+3. In admin go to emails
+4. Add new email (top right)
+5. Select Super user Email with serch Icon and update with verified and primary ticked
+6. LOGOUT of admin - I didnt do this so thought it wasnt working
+7. Go to the url path for the 8000 port like normal then add "/accounts/login" at the end
+    * this should take you to a log in page
+8. Log in with the details of the user you created
+    * If it worked it should redirect to a page with "/success" at the end
+    
+    
+
 
 
 
