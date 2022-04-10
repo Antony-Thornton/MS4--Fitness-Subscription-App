@@ -264,7 +264,7 @@ A Code Insititute template can be found <a href="https://github.com/Code-Institu
 
 ### Test the django environment
 1. In the terminal type "python3 manage.py runserver"
-    * You may need to expose pot 8000
+    * You may need to expose port 8000
     * You should see a message as per below if successfull
 
 ![index web](static/assets/images/development_cycle/django_success.jpg)
@@ -283,6 +283,44 @@ A Code Insititute template can be found <a href="https://github.com/Code-Institu
 5. Confirm password
     * You should get a creation successful message
     
+
+### Install Django Allauth 
+
+See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html">here</a> for details.
+
+1. In the terminal type "pip3 install django-allauth"
+2. Add "# Required by allauth" at the end of line 62 for reference
+3. Get settings from website link above and copy over "AUTHENTICATION_BACKENDS" code to the settings.py file
+4. Under the "INSTALLED_APPS" function of your settings.py file paste in the "Allauth" apps you would like to use
+    * For this I used:
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+5. Underneath "AUTHENTICATION_BACKENDS" in your settings.py file add "SITE_ID = 1"
+6. Add "path('accounts', include('allauth.urls'))," to your urls.py file
+7. Add , include to this line "from django.urls import path" in the url.py file as shown "from django.urls import path, include"
+
+### Python Migrations
+1. Type into the terminal "python3 manage.py migrate"
+    * I believe this migrates your files to the django website
+
+### Test the django environment
+1. In the terminal type "python3 manage.py runserver"
+    * You may need to expose port 8000
+    * You should see a page not found message
+2. In the navigation bar add /admin at the end and log using superuser details
+    * I came across an error when logging in
+<a name="django-admin"></a>
+![index web](static/assets/images/development_cycle/django_admin_login_error.jpg)
+    * To fix this issue
+
+        ![index web](static/assets/images/development_cycle/django_admin_login_error_fix.jpg)
+
+3. Change domain Name
+
+
+
 
 <a name="deployment"></a>
 
@@ -303,6 +341,8 @@ A Code Insititute template can be found <a href="https://github.com/Code-Institu
 
 # 8. Known Bugs
 #### [Go To Top](#table-of-contents "Go To Top")
+
+* Issue with Django versions causing log in issues for admin. See development cycle section
 
 ### Breakdown
 
