@@ -239,7 +239,7 @@ All Pages:
 # 5. Development Cycle
 #### [Go To Top](#table-of-contents "Go To Top")
 
-A Code Insititute template can be found <a href="https://github.com/Code-Institute-Org/gitpod-full-template">here</a>.
+A Code Insititute template can be found <a href="https://github.com/Code-Institute-Org/gitpod-full-template" target="_blank">here</a>.
 
 ### Setting up a new repository. 
 1. Go to the link above and click use this template
@@ -286,7 +286,7 @@ A Code Insititute template can be found <a href="https://github.com/Code-Institu
 
 ### Install Django Allauth 
 
-See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html">here</a> for details.
+See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" target="_blank">here</a> for details.
 
 1. In the terminal type "pip3 install django-allauth"
 2. Add "# Required by allauth" at the end of line 62 for reference
@@ -342,7 +342,12 @@ See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html">
 # 8. Known Bugs
 #### [Go To Top](#table-of-contents "Go To Top")
 
+Django Setup
 * Issue with Django versions causing log in issues for admin. See development cycle section
+* Issue where I was getting an error with clicking on site link
+    * I had to use this <a href="https://stackoverflow.com/questions/34548768/django-no-such-table-exception" target="_blank">link</a> to unmigrate py files then megrate again
+    * Also had to create a new superuser afterwards
+
 
 ### Breakdown
 
