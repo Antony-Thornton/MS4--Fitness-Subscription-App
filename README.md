@@ -353,7 +353,52 @@ See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" 
     * This will support older internet explorer windows
 6. Move the scripts to the top header
 7. Add "{% load static %}" to the very top of the page 
-8. Block off the header sections for extra functionality
+8. Block off sections for extra functionality
+
+### Creating and linking html pages
+In the terminal you need to create the app for the page
+
+1. Type "python3 manage.py startapp home" into the terminal
+2. Type "mkdir -p home/templates/home"
+    * p = parent
+3. Richt click on the new template and click new file called "index.html" or "x"
+4. In the template add in the extends base.html python code for example
+
+        {% extends "base.html" %}
+        {% load static %}
+
+        {% block content %}
+            <h1 class="display-4 text-success">It works!</h1>
+        {% endblock %}
+
+5. In views.py define the template view under the new template
+        from django.shortcuts import render
+
+        # Create your views here.
+
+        def index(request):
+        """ A view to return the index page """
+
+        return render(request, 'home/index.html')
+
+6. Copy the project (top level) urls.py code and paste it into the new template folder
+
+        from django.contrib import admin
+        from django.urls import path
+        from . import views
+
+        urlpatterns = [
+        path('', views.index, name='home')
+        ]
+7. In the urls.py file at project level add the url for the home page
+8. In the project level settings.py file add "'home/'," to the installed apps
+9. In the same file under TEMPLATES update the DIRS with
+
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+
+10. Save changes and test its working by loading a new server
+    * When I first did this I had a few files out of place so was getting "ModuleNotFoundError: No module named 'home/'" error
 
 
 
