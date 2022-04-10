@@ -262,37 +262,27 @@ A Code Insititute template can be found <a href="https://github.com/Code-Institu
 2. Add *.pyc
 3. Add __pycache__
 
-* Test the django environment
-    1. In the terminal type "python3 manage.py runserver"
+### Test the django environment
+1. In the terminal type "python3 manage.py runserver"
     * You may need to expose pot 8000
-        * You should see a message as per below
+    * You should see a message as per below if successfull
 
 ![index web](static/assets/images/development_cycle/django_success.jpg)
 
 
-* Python Migrations
-    1. Type into 
+### Python Migrations
+1. Type into the terminal "python3 manage.py migrate"
+    * I believe this migrates your files to the django website
 
-* Install supporting python libraries
-    * Install PyMongo and Flask.
-    * Create the requirements.txt file. This includes the project's dependencies allowing us to run the project in Heroku
 
-* Create new Heroku app
-    * Sign into Heroku
-    * Select New
-    * Select create new app
-    * Enter a relevant app name
-    * Select appropriate region
-    * Select the create app button
-
-* Prepare the environment and app.py file
-    * Create env.py file
-    * Add DATABASE_URL with the URL from Heroku
-    * Add SECRET_KEY with a randomly generated key
-    * Add SECRET_KEY and generated key to the config vars in Heroku
-    * Replace insecure key with the environment variable for the SECRET_KEY
-    * Add Heroku database as the back end
-    * Migrate changes to new database
+### Create a superuser
+1. Type into the terminal "python3 manage.py createsuperuser"
+2. Enter desired username
+3. Enter desired email
+4. enter desired password
+5. Confirm password
+    * You should get a creation successful message
+    
 
 <a name="deployment"></a>
 
