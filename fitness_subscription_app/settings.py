@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',  # Logging in with social media
     # My templates
     'home',
+    'products',
 
 ]
 
