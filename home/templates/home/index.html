@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -10,18 +10,66 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    Browse our products and plans here
-                </h1>
-                <div class="my-5">
-                    <h4>
+ 
+
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 logo-font text-black">
+                Browse our products and plans here
+            </h1>
+            <p class="lead">Looking to change your life? Browse our collection of Exercise and Nutrition plans.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                <div >
+                    <h4 style="padding-bottom: 15px;">
                         <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                     </h4>
                 </div>
             </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+              <img class="rounded-lg-3" src="static/assets/images/site images/pexels-format-1029757.jpg" alt="" width="720">
+          </div>
         </div>
-    </div>
+      </div>
+      <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 logo-font text-black">
+                Browse our Nutrition plans
+            </h1>
+            <p class="lead">We have plans to suit a wide range of people. From standard to special diets we have something for everyone.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                <div >
+                    <h4 style="padding-bottom: 15px;">
+                        <a href="{% url 'products' %}" class="shop-now-button2 btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+              <img class="rounded-lg-3" src="static/assets/images/site images/pexels-madison-inouye-2180092.jpg" alt="" width="720">
+          </div>
+        </div>
+      </div>
+      <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 logo-font text-black">
+                Browse our Exercise plans
+            </h1>
+            <p class="lead">We have plans to suit a wide range of people. From standard to special diets we have something for everyone.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                <div >
+                    <h4 style="padding-bottom: 15px;">
+                        <a href="{% url 'products' %}" class="shop-now-button3 btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+              <img class="rounded-lg-3" src="static/assets/images/site images/pexels-bich-tran-1059383.jpg" alt="" width="720">
+          </div>
+        </div>
+      </div>
 {% endblock %}

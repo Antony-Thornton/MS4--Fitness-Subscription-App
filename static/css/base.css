@@ -33,6 +33,18 @@ body {
     min-width: 260px;
 }
 
+.shop-now-button2 {
+    background: red;
+    color: white;
+    min-width: 260px;
+}
+
+.shop-now-button3 {
+    background: blue;
+    color: white;
+    min-width: 260px;
+}
+
 .btn-color {
     background: #198754;
     color: white;
@@ -70,6 +82,7 @@ body {
     background: white;
     z-index: -1;
 }
+
 
 /* --------------------------------- Media queries */
 
