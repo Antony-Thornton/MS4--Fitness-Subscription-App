@@ -84,6 +84,15 @@ body {
 }
 
 
+
+.login_page {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+}
+
+
 /* --------------------------------- Media queries */
 
 /* Slightly larger container on xl screens */
