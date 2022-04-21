@@ -99,6 +99,17 @@ body {
     background-color: #198754;
 }
 
+
+.category-badge > span.badge:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.badge {
+    background-color: #198754;
+
+}
+
 /* --------------------------------- Media queries */
 
 /* Slightly larger container on xl screens */
