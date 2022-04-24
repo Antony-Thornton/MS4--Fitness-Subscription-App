@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # My templates
     'home',
     'products',
+    'cart',
 
 ]
 
