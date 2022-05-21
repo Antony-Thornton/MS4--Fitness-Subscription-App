@@ -44,15 +44,19 @@ def remove_from_cart(request, item_id):
     """ Remove a product from cart """
 
     try:
-        quantity = int(request.POST.get('quantity'))
+        # item_id = int(request.POST.get('item_id'))
         cart = request.session.get('cart', {})
 
-        if quantity > 0:
-            cart[item_id] = quantity
-        else:
-            cart.pop(item_id)
+        # if quantity > 0:
+        #     cart[item_id] = quantity
+        #     print("1")
+        # else:
+        cart.pop(item_id)
 
         request.session['cart'] = cart
-        return HttpResponse(status=200)
+
+        # print(request)
+        # print(item_id)
+        return redirect(reverse('view_cart'))
     except Exception as e:
-        return HttpResponse(status=500)
+        return redirect(reverse('view_cart'))
