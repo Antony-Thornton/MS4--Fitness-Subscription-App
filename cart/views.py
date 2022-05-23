@@ -24,7 +24,7 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
     else:
         cart[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your bag')
+        messages.success(request, f'Added {product.name} to your cart.')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -33,13 +33,16 @@ def add_to_cart(request, item_id):
 def adjust_cart(request, item_id):
     """ Add a quantity of product to the cart """
 
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
 
     if quantity > 0:
         cart[item_id] = quantity
+        messages.success(request, f'{product.name} quantity adjusted.')
     else:
         cart.pop(item_id)
+        messages.success(request, f'{product.name} quantity adjusted.')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -49,14 +52,17 @@ def remove_from_cart(request, item_id):
     """ Remove a product from cart """
 
     try:
+        
         # item_id = int(request.POST.get('item_id'))
         cart = request.session.get('cart', {})
+        product = Product.objects.get(pk=item_id)
 
         # if quantity > 0:
         #     cart[item_id] = quantity
         #     print("1")
         # else:
         cart.pop(item_id)
+        messages.success(request, f'{product.name} removed from cart.')
 
         request.session['cart'] = cart
 
