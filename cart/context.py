@@ -23,10 +23,11 @@ def cart_contents(request):
             'product': product,
         })
     
-    if total == 0:
-        delivery = 0
+    if total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
     else:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
+        delivery = 0
+        
 
     grand_total = delivery + total
 

@@ -39,12 +39,12 @@ def checkout(request):
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
+                            quantity=item_data,
                         )
                         order_line_item.save()
                 except product.DoesNotExist:
-                    messages.error(request, "One of the products in your bag \
-                        wasn't found in our database."
-                    )
+                    messages.error(request, "One of the products in your cart \
+                        wasn't found in our database.")
                     order.delete()
                     return redirect(reverse('view_cart'))
             request.session['save_info'] = 'save-info' in request.POST
