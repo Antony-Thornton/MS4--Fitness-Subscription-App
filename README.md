@@ -430,6 +430,15 @@ Django Setup
 * Issue where I was getting an error with clicking on site link
     * I had to use this <a href="https://stackoverflow.com/questions/34548768/django-no-such-table-exception" target="_blank">link</a> to unmigrate py files then megrate again
     * Also had to create a new superuser afterwards
+* Card payment element on the checkout page wasnt displaying. 
+    * Fixed by unticking cache
+    1. While the devtools is open (which it should be during development), the cache will be disabled.
+    2. When devtools is closed, the cache will return to it's normal behaviour.
+    3. Open your browser's developer tools
+    4. Navigate to the "Network" tab
+    5. Check the "Disable Cache" checkbox
+    6. Reload your page as normal. (With devtools still open)
+
 
 
 ### Breakdown
