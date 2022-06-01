@@ -22,10 +22,9 @@
                 Nutrition Plans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="plan-link">
-                <a href="" class="dropdown-item">Vegan</a>
-                <a href="" class="dropdown-item">Vegetarian</a>
-                <a href="" class="dropdown-item">Standard</a>
-                <a href="{% url 'products' %}?category=Vegan,Vegetarian,Standard" class="dropdown-item">All Plans</a>
+                <a href="{% url 'products' %}?category=Vegan" class="dropdown-item">Vegan</a>
+                <a href="{% url 'products' %}?category=Vegetarian" class="dropdown-item">Vegetarian</a>
+                <a href="{% url 'products' %}?category=Vegan,Vegetarian" class="dropdown-item">All Plans</a>
             </div>
         </li>
 
@@ -34,9 +33,9 @@
                 Exercise Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="excercise-link">
-                <a href="" class="dropdown-item">Cardio</a>
-                <a href="" class="dropdown-item">Weights</a>
-                <a href="" class="dropdown-item">Hybrid</a>
+                <a href="{% url 'products' %}?category=Cardio" class="dropdown-item">Cardio Equipment</a>
+                <a href="{% url 'products' %}?category=Weights" class="dropdown-item">Weights/Other</a>
+                <a href="{% url 'products' %}?category=Weights,Cardio" class="dropdown-item">All Equipment</a>
             </div>
         </li>
         <li class="nav-item dropdown">
