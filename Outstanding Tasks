@@ -8,3 +8,14 @@ Product Review
 
 
 DO NOT LEAVE DEBUG = TRUE
+
+
+
+MUST HAVE CRUD FUNCTIONALITY FOR
+Contact Form
+Product Review
+
+
+Models = Interface to database
+URLS = 
+Views = Hold the functional logic to extract manipulate and receive data
