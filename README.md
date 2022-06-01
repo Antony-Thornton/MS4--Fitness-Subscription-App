@@ -1,8 +1,8 @@
-# CHANGE NAME
+# The Veggie Guy Fitness App
 ## Introduction
 Welcome to my fourth project. This project is a simple online Fitness Subscription Application that allows users to manage their own recipes remotely. This will use languages such as Django, Python, HTML, CSS and JavaScript.
 
-This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile.
+This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile. They will also be able to purchase items from the shop. 
 
 A live website can be found <a href="" target="_blank">here</a>.
 
@@ -31,34 +31,56 @@ A live website can be found <a href="" target="_blank">here</a>.
 
 # 1.UX
 #### [Go To Top](#table-of-contents "Go To Top")
-The project will give the user an easy way to store, update, delete and edit stored recipes. Either personal or external.
+This project is designed to extend "The Veggie Guy" brand by offering a fitness solution alongside a cookbook solution seen <a href="https://cook-book-antony.herokuapp.com/" target="_blank">here</a>. 
+
+The website is primarily built with influence from code insitituesmini project which utilises the bootstrap framework. Credit for the UX design is due for both parties. 
+
+<br>
 
 <a name="strategy"></a>
 
 ## 1.1 Strategy
 #### [Go To Top](#table-of-contents "Go To Top")
 
-### Project Goals
+<br>
+
+## Project Goals
 The main goal of this project is to allow the user to 
 
 The website should:
+* Promote a brand of fitness recipe's(In this case books) and other fitness related products
+* Allow the user to create a profile
+* Allow the user to purchase fitness related products
 
+## User Goals:
 
-### User Goals:
+### First Time Visitor Goals
 
-First Time Visitor Goals
-
-
+The user should be able to add items to:
+* Add items to their cart
+* View their cart
+* Adjust items in their cart
+* Purchase their items and get them delivered
+* Get a visual and email confirmation of their purchase
 
 Returning Visitor Goals
+The user should be able to add items to:
+* View items in their cart from the last visit if they did not purchase
+* Add items to their cart
+* View their cart
+* Adjust items in their cart
+* Purchase their items and get them delivered
+* Get a visual and email confirmation of their purchase
+
 
 
 ### User Expectations:
 The system should have a simple user interface, with the navigation to each section clear and concise.
 
-* Each page is clear to read.
-* The user interface is easy to navigate.
-* The website is responsive on all devices.
+* Each page is clear to read
+* The user interface is easy to navigate
+* The website is responsive on all devices
+* Thr user should be able to browse and purchase products.
 
 <a name="structure"></a>
 
@@ -87,9 +109,11 @@ It is really important to include responsive design in this project as many user
 #### [Go To Top](#table-of-contents "Go To Top")
 
 ### Font and colours:
-Colours used can be found <a href="https://materializecss.com/color.html" target="_blank">here</a>.
+Colours used can be found <a href="https://getbootstrap.com/docs/5.0/utilities/colors/" target="_blank">here</a>.
 
-Fonts used have been pulled through using materializecss.
+Fonts used have been pulled through using Bootstrap 5.
+
+In order to stay consistent with the Veggie Guy brand I have chosen a Green theme. The green is slightly different to the cookbook website due to materialisecss and bootstrap differences but I am happy as this allows the user to differentiate which site they are looking at.
 
 <a name="features"></a>
 
@@ -112,7 +136,7 @@ Fonts used have been pulled through using materializecss.
 
 
 ## Features left to implement
-
+* Load the cookbook website into this site - Ideally the cookbook and the fitness app will be on the same site so the user profile can accomodate both and it becomes a community hub.
 
 
 <a name="technologies-used"></a>
@@ -144,6 +168,8 @@ Fonts used have been pulled through using materializecss.
     * The project uses Chrome to debug and test the source code using HTML5
 * <a href="https://beautifier.io/" target="_blank">Code beautifier</a>
     * Corrects JavaScript/HTML/CSS code with correct spacing/lines etc.
+* <a href="https://stripe.com/" target="_blank">Stripe</a>
+    * For live and testing payment methods. During development I used a specific set of card details.
 
 
 <a name="testing"></a>
@@ -153,7 +179,7 @@ Fonts used have been pulled through using materializecss.
 
 * Testing has been based on a minimum size of an iPhone SE and a maximum width of 1440px as per my mentor’s advice. Custom CSS has been created to accommodate multiple screen sizes
 
-* Python Code in the app.py file has been validated by using <a href="http://pep8online.com/" target="_blank">PEP8 Online</a>
+* Python Code in the app.py file has been validated by using <a href="http://pep8online.com/" target="_blank">PEP8 Online</a> and the inbuilt problems tracker in GitPod
 
 * HTML code has been validated using <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a>
 
@@ -205,26 +231,35 @@ All Pages:
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 
-## Tools Page
+## All Products
 
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 
-## Community Page
+## Nutrition Plans
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 
 
-## Register Page
+## Exercise Plans
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
+
+## Register
+| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| :--- | :--- | :--- | :--- | :---
+
 
 ## Login Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 
 
-## My Recipe's Page
+## Shopping Cart
+| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| :--- | :--- | :--- | :--- | :---
+
+## Checkout
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 
@@ -233,6 +268,10 @@ All Pages:
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 
+
+## Search bar
+| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| :--- | :--- | :--- | :--- | :---
 
 <a name="development-cycle"></a>
 
@@ -425,6 +464,8 @@ In the terminal you need to create the app for the page
 # 8. Known Bugs
 #### [Go To Top](#table-of-contents "Go To Top")
 
+### Breakdown
+
 Django Setup
 * Issue with Django versions causing log in issues for admin. See development cycle section
 * Issue where I was getting an error with clicking on site link
@@ -440,8 +481,16 @@ Django Setup
     6. Reload your page as normal. (With devtools still open)
 
 
+### Bugs to be fixed
+* "GET /static/profiles/js/countryfield.js HTTP/1.1" 404 1709
+* "GET /favicon.ico HTTP/1.1" 404 2839
+* Emails not sending in terminal
+* Webhooks not succeeding in stripe
 
-### Breakdown
+
+
+
+
 
 <a name="credits"></a>
 
@@ -451,12 +500,20 @@ Django Setup
 
 ## Code
 
+None at time of writing
+
+# ****** Update at the end of project if needed ******
 
 
 ## Content
 
+* <a href="https://www.pexels.com/" target="_blank">For pictures</a> - Artists can be found <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/tree/main/static/assets/images/site%20images" target="_blank">here</a>.
 
 
 ## Project Acknowledgements
 
 <a href=""></a>
+
+* Code Institute Tutor Support - For directing me to the correct solutions for any bugs and problems with my project.
+
+* My Mentor Marcel - For his constructive criticism and always pushing me to go further to develop my skills.
