@@ -33,7 +33,7 @@ A live website can be found <a href="" target="_blank">here</a>.
 #### [Go To Top](#table-of-contents "Go To Top")
 This project is designed to extend "The Veggie Guy" brand by offering a fitness solution alongside a cookbook solution seen <a href="https://cook-book-antony.herokuapp.com/" target="_blank">here</a>. 
 
-The website is primarily built with influence from code insitituesmini project which utilises the bootstrap framework. Credit for the UX design is due for both parties. 
+The website is primarily built with influence from code insititues mini project which utilises the bootstrap framework. Credit for the UX design is due for both parties. 
 
 <br>
 

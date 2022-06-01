@@ -1,2 +1,10 @@
 Email not currently sending in the terminal
 "GET /static/profiles/js/countryfield.js HTTP/1.1" 404 1709 Error
+
+
+MUST HAVE CRUD FUNCTIONALITY FOR
+Contact Form
+Product Review
+
+
+DO NOT LEAVE DEBUG = TRUE
