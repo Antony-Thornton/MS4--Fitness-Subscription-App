@@ -19,3 +19,7 @@ Product Review
 Models = Interface to database
 URLS = 
 Views = Hold the functional logic to extract manipulate and receive data
+
+
+Workout how to get emails to send and or upload to admin.
+Fix resubmission error on form when refreshing page.
