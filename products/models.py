@@ -28,3 +28,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class product_review(models.Model):
+    
+    sku = models.CharField(max_length=254, null=True, blank=True)
+    review = models.CharField(max_length=254, null=True, blank=True)
