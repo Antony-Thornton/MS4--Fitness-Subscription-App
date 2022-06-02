@@ -189,3 +189,19 @@ STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 DEFAULT_FROM_EMAIL = 'Orders@TheVeggieGuy.com'
+
+# Email settings for contact form
+# EMAIL_HOST = 'smtp.gmail.com'  # 'localhost'
+# EMAIL_PORT = '587'  # '1025' for test
+# EMAIL_HOST_USER = 'antonythornton1@googlemail.com'
+# EMAIL_HOST_PASSWORD = os.getenv('GMAIL_PASSWORD', '')
+# EMAIL_USE_TLS = True  # False
+# Security Layer
+# EMAIL_USE_SSL = False
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_HOST_USER = 'antony_thornton_p@outlook.com'
+EMAIL_HOST_PASSWORD = os.getenv('OUTLOOk_PASSWORD', '')
+EMAIL_PORT = 25

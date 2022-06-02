@@ -21,16 +21,16 @@
             <form class="form update-form" method="POST" action="{% url 'contact_form_post' %}">{% csrf_token %}
                 <div class="mb-3">
                     <label for="fullName" class="form-label" required>Full Name</label>
-                    <input type="name" class="form-control" id="fullName" placeholder="Full name" required>
+                    <input type="name" class="form-control" id="fullName" placeholder="Full name" name="full_name" required>
                   </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email Address</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email Address"required>
+                  <input type="email" class="form-control" id="email" placeholder="Email Address" name="email"  required>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
-                        <span class="input-group-text" id="comments">Comments</span>
-                        <textarea class="form-control"></textarea>
+                        <span class="input-group-text" id="message">message</span>
+                        <textarea class="form-control" name="message"></textarea>
                     </div>
                 </div>
             <button class="btn btn-success" style="margin: 1px; background-color: Green;">Submit Form</button>    

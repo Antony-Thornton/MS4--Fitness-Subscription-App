@@ -509,6 +509,8 @@ None at time of writing
 
 * <a href="https://www.pexels.com/" target="_blank">For pictures</a> - Artists can be found <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/tree/main/static/assets/images/site%20images" target="_blank">here</a>.
 * For some of the diet plans/books I used images found online. For more information on each of the books seen please see the link in the description of the product.
+* Contact form Email - https://www.youtube.com/c/Codemycom
+
 
 ## Project Acknowledgements
 
