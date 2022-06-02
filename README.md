@@ -479,6 +479,10 @@ Django Setup
     4. Navigate to the "Network" tab
     5. Check the "Disable Cache" checkbox
     6. Reload your page as normal. (With devtools still open)
+* I accidently submitted to the admin panel early. It ended up having phone_number with blanke entries
+    * In order to fix i needed to migrate changes and replace the blank with 1. 
+    * I then migrated the changes with this
+    * This allowed me to go into the admin (which was erroring before)
 
 
 ### Bugs to be fixed
