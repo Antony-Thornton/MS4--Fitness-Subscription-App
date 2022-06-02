@@ -2,11 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block content %}
@@ -87,11 +82,69 @@
                     </form>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2" style="margin-bottom: 50px;">
+                    <form class="form update-form" method="POST" action="">{% csrf_token %}
+                        <h1>Leave a review</h1>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text" id="message">Review</span>
+                                <textarea class="form-control" name="message"></textarea>
+                            </div>
+                        </div>
+                        <button class="btn btn-success" style="margin: 1px; background-color: Green;">Submit Review</button>    
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2" style="margin-bottom: 50px;">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-success" data-toggle="collapse" data-target="#content">See other reviews</button>
+                                    <div class="collapse.show" id="content">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                All Customer Reviews
+                                            </div>
+                                            <div class="card-body">
+                                            
+                                            <blockquote class="blockquote mb-0">
+                                                <p>A well-known quote, contained in a blockquote element.</p>
+                                            </blockquote>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>A well-known quote, contained in a blockquote element.</p>
+                                            </blockquote>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>A well-known quote, contained in a blockquote element.</p>
+                                            </blockquote>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>A well-known quote, contained in a blockquote element.</p>
+                                            </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
         </div>
+    </div>
+        
     </div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+<script type="text/javascript">
+var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+var collapseList = collapseElementList.map(function (collapseEl) {
+  return new bootstrap.Collapse(collapseEl)
+})
+</script>
+
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
