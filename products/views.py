@@ -66,35 +66,47 @@ def product_detail(request, product_id):
         'product': product,
     }
 
+    review_form = ReviewForm()
+    if request.method == 'POST':
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            new_review = review_form.save(commit=False)
+            new_review.product = product
+            new_review.save()
+            messages.success(request, 'Thank you for your review.')
+        else:
+            review_form = ReviewForm()
     return render(request, 'products/product_detail.html', context)
 
 
-def productReview(request):
 
-    template = 'products/product_detail.html'
-    messages.success(request, 'Thansdffdsd')
-    if request.method == 'POST':
+# Moved this to the function above.
+# def productReview(request):
 
-        messages.success(request, 'Thank you for your review.')
+#     template = 'products/product_detail.html'
+#     messages.success(request, 'Thansdffdsd')
+#     if request.method == 'POST':
 
-        form_data = {
-            'sku': request.POST['product_id'],
-            'review': request.POST['review'],
-        }
+#         messages.success(request, 'Thank you for your review.')
 
-        review_form = ReviewForm(form_data)
-        if review_form.is_valid():
-            contact = review_form.save(commit=False)
-            contact.save()
-            request.session['save_info'] = 'save-info' in request.POST
-            return render(request, template, {})
-        else:
-            messages.error(request, 'There was an error with your form. \
-                Please resubmit')
+#         form_data = {
+#             'sku': request.POST['product_id'],
+#             'review': request.POST['review'],
+#         }
+
+#         review_form = ReviewForm(form_data)
+#         if review_form.is_valid():
+#             contact = review_form.save(commit=False)
+#             contact.save()
+#             request.session['save_info'] = 'save-info' in request.POST
+#             return render(request, template, {})
+#         else:
+#             messages.error(request, 'There was an error with your form. \
+#                 Please resubmit')
            
-        return render(request, template, {})
+#         return render(request, template, {})
 
-    else:
-        messages.error(request, "Not working.")
+#     else:
+#         messages.error(request, "Not working.")
 
-        return render(request, template, {})
+#         return render(request, template, {})
