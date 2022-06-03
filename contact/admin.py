@@ -4,4 +4,12 @@ from .models import contact_message
 # Register your models here.
 
 
-admin.site.register(contact_message)
+class contactMessage(admin.ModelAdmin):
+    list_display = (
+        'full_name',
+        'email',
+        'message',
+    )
+
+
+admin.site.register(contact_message, contactMessage)
