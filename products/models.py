@@ -31,6 +31,8 @@ class Product(models.Model):
 
 
 class product_review(models.Model):
-    
+
     sku = models.CharField(max_length=254, null=True, blank=True)
     review = models.CharField(max_length=254, null=True, blank=True)
+    def __str__(self):
+        return self.review
