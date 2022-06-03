@@ -84,7 +84,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2" style="margin-bottom: 50px;">
-                    <form class="form update-form" method="POST" action="">{% csrf_token %}
+                    <form class="form update-form" method="POST" action="{% url 'productReview' %}">{% csrf_token %}
                         <h1>Leave a review</h1>
                             <input type="hidden" name="product_id" id="product_id" data-item_id="{{ product.id }}">
                         <div class="mb-3">
