@@ -61,7 +61,7 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-
+    print(product)
     context = {
         'product': product,
     }
@@ -71,7 +71,7 @@ def product_detail(request, product_id):
         review_form = ReviewForm(data=request.POST)
         if review_form.is_valid():
             new_review = review_form.save(commit=False)
-            new_review.product = product
+            new_review.sku = product
             new_review.save()
             messages.success(request, 'Thank you for your review.')
         else:
