@@ -181,6 +181,11 @@ body {
 }
 
 
+.test {
+    color: purple;
+    font-size: large;
+}
+
 
 /* --------------------------------- Media queries */
 
