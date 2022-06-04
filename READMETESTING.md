@@ -1,26 +1,22 @@
 # The Veggie Guy Fitness App
-## Testing
+# Testing
+
+## Introduction
+
+Full website testing can be seen below. For the main README cick <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/README.md" target="_blank">here</a>. Full testing has been conducted AFTER the application was uploaded to Heroku.
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1308118%2Fpexels-photo-1308118.jpeg%3Fcs%3Dsrgb%26dl%3Dcode-coder-codes-1308118.jpg%26fm%3Djpg&f=1&nofb=1" alt="Testing" >
+
+<br>
 
 # Table of Contents
 
--   [1. UX](#ux)
-    -   [1.1. Strategy](#strategy)
-        -   [Project Goals](#project-goals)
-            -   [User Goals:](#user-goals)
-            -   [User Expectations:](#user-expectations)
-    -   [1.2. Structure](#structure)
-    -   [1.3. Skeleton](#skeleton)
-    -   [1.4. Surface](#surface)
--   [2. Features](#features)
--   [3. Technologies Used](#technologies-used)
--   [4. Testing](#testing)
--   [5. Development Cycle](#development-cycle)
--   [6. Deployment](#deployment)
--   [7. End Product](#end-product)
--   [8. Known Bugs](#known-bugs)
--   [9. Credits](#credits)
-
-<a name="ux"></a>
+-   [1. Testing](#testing)
+    -   [1.1. Considerations](#considerations)
+    -   [1.2 Code validation](#code)
+        -   [Javascript](#javascript)    
+-   [2. Manual](#manual)
+            
 
 
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -28,7 +24,11 @@
 
 <a name="testing"></a>
 
-# 4. Testing
+# 1. Testing
+
+<a name="considerations"></a>
+
+## 1.1 Considerations
 
 * Testing has been based on a minimum size of an iPhone SE and a maximum width of 1440px as per my mentor’s advice. Custom CSS has been created to accommodate multiple screen sizes
 
@@ -38,47 +38,111 @@
 
 * CSS code has been validated using <a href="https://jigsaw.w3.org/CSS-validator//" target="_blank">W3C CSS Validation Service</a>
 
+* Javascript code has been validated using <a href="https://jshint.com/" target="_blank">JS Hint</a>
+
+* Site response has been validated using <a href="http://ami.responsivedesign.is/" target="_blank">Am I Responsive</a>
+
 ### iPhone SE
+
+Add image of iphone se here
+
 
 ### 1440p
 
-# Code validation
+Add image of 1440p here
 
-## Responsive Tools
-I used <a href="http://ami.responsivedesign.is/" target="_blank">Am I Responsive</a> to make sure that all my pages are responsive to all devices.
+<a name="code"></a>
 
-## JavaScript
-I used <a href="https://jshint.com/" target="_blank">JS Hint</a> to check for any errors within my JavaScript script tags. 
+## 1.2 Code validation
 
+
+
+<br>
 
 ## PEP8 Online results
 
+<br>
 
 ## HTML Validator results
 
 | Page | Date Checked | Result | Comment
 | :--- | :--- | :--- | :-- 
+cart.html |||
+checkout_success.html
+checkout.html
+contact.html
+index.html
+custom_clearable_file_input.html
+add_product.html
+edit_product.html
+product_detail.html
+products.html
+profile.html
+main-nav.hmtl
+mobile-top-header.html
+base.html
+
+<br>
 
 ## CSS Validator results
 | Page | Date Checked | Result | Comment
 | :--- | :--- | :--- | :-- 
+checkout.css
+profile.css
+base.css
+
+<br>
+
+### JavaScript results
+| Page | Date Checked | Result | Comment
+| :--- | :--- | :--- | :-- 
+countryfield.js
 
 
-## Manual Testing
+<br>
+<br>
+
+<a name="manual"></a>
+
+# 2. Manual Testing
 
 ## Navigation Bar
 All Pages:
 
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
+Home
+All products
+Nutrition Plans
+Exercise Equipement
+Contact
+Product Management
+My Profile
+Log out
+Register
+Edit product
 
+
+<br>
+<br>
 
 ## Footer Links
 All Pages:
 
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-
+Home
+All products
+Nutrition Plans
+Exercise Equipement
+Contact
+Product Management
+My Profile
+Log out
+Register
+Edit product
+<br>
+<br>
 
 ## Home Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
