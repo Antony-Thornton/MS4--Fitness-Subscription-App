@@ -395,6 +395,11 @@ Django Setup
     * In order to fix i needed to migrate changes and replace the blank with 1. 
     * I then migrated the changes with this
     * This allowed me to go into the admin (which was erroring before)
+* When trying to get the write review function to work i added a star function and migrated the changes to the database then reverted back. This caused an issue with my urls not working. I initially thought I had killed my project because nothing had changed except reversing the migrations
+    * I made a branch of a previously working commit and installed the python libraries
+    * I then tried to use the site but was getting a CSRF error message.
+    * I treid fixing this by clearing the cache and accidently tabbed back into the main branch which was now working
+    * Not sure if this was the actual fix or not at this point
 
 
 ### Bugs to be fixed

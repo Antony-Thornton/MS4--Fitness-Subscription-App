@@ -1,28 +1,13 @@
+Errors to check
 Email not currently sending in the terminal
 "GET /static/profiles/js/countryfield.js HTTP/1.1" 404 1709 Error
-
-
-MUST HAVE CRUD FUNCTIONALITY FOR
-Contact Form
-Product Review
-
-
-DO NOT LEAVE DEBUG = TRUE
-
-
-
-MUST HAVE CRUD FUNCTIONALITY FOR
-Contact Form
-Product Review
-
-
-Models = Interface to database
-URLS = 
-Views = Hold the functional logic to extract manipulate and receive data
-
-
-Workout how to get emails to send and or upload to admin.
 Fix resubmission error on form when refreshing page.
 
 
-test
+
+1. Final CSS changes to pages
+2. Deploy to Heroku
+3. Wireframes
+4. README updates
+5. TESTING
+
