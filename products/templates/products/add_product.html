@@ -21,7 +21,13 @@
                 <h1>No more than 6 digits for price.</h1>
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data"> <!-- enctype to allow image to upload properly -->
                     {% csrf_token %}
-                    {{ form | crispy }}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
                     <div class="text-right">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
                         <button class="" type="submit">Add Product</button>
@@ -30,4 +36,14 @@
             </div>            
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`); /* Note the backticks here */
+        });
+    </script>
 {% endblock %}
