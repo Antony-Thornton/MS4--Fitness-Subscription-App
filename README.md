@@ -137,7 +137,7 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 
 ## Features left to implement
 * Load the cookbook website into this site - Ideally the cookbook and the fitness app will be on the same site so the user profile can accomodate both and it becomes a community hub.
-
+* Star Rating system
 
 <a name="technologies-used"></a>
 
@@ -181,7 +181,7 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 
 In order to reduce content in this README full testing has been documented in a seperate README.
 
-See <a href="https://stripe.com/" target="_blank">here</a> for full testing
+See <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">here</a> for full testing
 
 
 
