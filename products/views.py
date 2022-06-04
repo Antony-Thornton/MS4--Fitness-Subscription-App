@@ -5,6 +5,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category, product_review
 from .forms import ReviewForm, ProductForm
 
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -37,10 +38,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search \
+                    criteria!")
                 return redirect(reverse('products'))
             
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -57,7 +60,8 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
-    # https://stackoverflow.com/questions/54735780/display-query-set-object-in-django-template Helped with the review bug where objects werent showing
+    # https://stackoverflow.com/questions/54735780/display-query-set-object-in-
+    # django-template Helped with the review bug where objects werent showing
     product = get_object_or_404(Product, pk=product_id)
     review = product_review.objects.all()
     context = {
@@ -80,6 +84,16 @@ def product_detail(request, product_id):
 
 def add_product(request):
     """ Add a product to the store """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added a new product.')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. \
+                Please check the form is valid.')
+
     form = ProductForm()
     template = 'products/add_product.html'
     context = {

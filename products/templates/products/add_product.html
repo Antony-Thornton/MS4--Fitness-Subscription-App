@@ -18,6 +18,7 @@
 
         <div class="row">
             <div class="col-12 col-md-6">
+                <h1>No more than 6 digits for price.</h1>
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data"> <!-- enctype to allow image to upload properly -->
                     {% csrf_token %}
                     {{ form | crispy }}
