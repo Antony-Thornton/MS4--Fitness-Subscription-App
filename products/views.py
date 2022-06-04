@@ -57,12 +57,12 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
+    # https://stackoverflow.com/questions/54735780/display-query-set-object-in-django-template Helped with the review bug where objects werent showing
     product = get_object_or_404(Product, pk=product_id)
     review = product_review.objects.all()
     context = {
         'product': product,
-        'review': review,
+        'object_list': review,
     }
 
     review_form = ReviewForm()

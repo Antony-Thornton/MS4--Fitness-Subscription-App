@@ -106,10 +106,12 @@
                                                 All Customer Reviews
                                             </div>
                                             <div class="card-body">                                                
-                                            {% for item_review in review %}
+                                            {% for obj in object_list %}
+                                            {% if obj.sku == product.name %}
                                             <blockquote class="blockquote mb-0">
-                                                <p>{{ review }}</p>
+                                                <p>{{ obj.review }}</p>
                                             </blockquote>
+                                            {% endif %}
                                             {% endfor %}
                                     </div>
                                 </div>
