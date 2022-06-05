@@ -10,7 +10,7 @@
             <div class="col text-center mt-3">
                 <h1 class="logo-font">Products</h1>
                 {% for c in current_categories %}
-                    <a href="{% url 'products' %}?category={{ c.name }}" class="badge badge-success" style="font-weight: normal; font-weight: 1rem; font-size:1rem;">{{ c.friendly_name }}</a>
+                    <a href="{% url 'products' %}?category={{ c.name }}" class="badge badge-success" style="font-weight: normal; font-size:1rem;">{{ c.friendly_name }}</a>
                 {% endfor %}
                 <hr class="w-50 mb-1">
             </div>

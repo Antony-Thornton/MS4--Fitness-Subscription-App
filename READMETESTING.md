@@ -130,20 +130,15 @@ My profile | n/a | n/a
 
 | Page | Date Checked | Result | Comment
 | :--- | :--- | :--- | :-- 
-cart.html |||
-checkout_success.html
-checkout.html
-contact.html
-index.html
-custom_clearable_file_input.html
-add_product.html
-edit_product.html
-product_detail.html
-products.html
-profile.html
-main-nav.hmtl
-mobile-top-header.html
-base.html
+Home Page | 05/06/2022 | Pass | Python errors
+Contact | 05/06/2022 | Pass | 1 non python related error regarding required element. Because its a contact form I need a name and therfore required so the user has to enter something.
+All products | 05/06/2022 | Pass | Python errors
+All books | 05/06/2022 | Pass | Python errors
+All Equipment | 05/06/2022 | Pass | Python errors
+Product Management | 05/06/2022 | Pass | Python errors
+My profile | 05/06/2022 | Pass | Python errors - Copy and pasted due to user login
+Add product | 05/06/2022 | Tentitve Pass | HTML errors resulting from cripsy forms i believe. I could not find the code that wc3 was validating.
+Edit product | 05/06/2022 | Tentitve Pass | HTML errors resulting from cripsy forms i believe. I could not find the code that wc3 was validating.
 
 <br>
 
@@ -168,6 +163,19 @@ products.html postload | 05/06/2022 | Pass | 1 warning (ES6)
 profile.html postload | 05/06/2022 | Pass | 1 warning (ES6)
 base.html postload | 05/06/2022 | Pass | n/a
 
+## Post Pep8 chenages testing
+Running basic checks to see if everything is still working as expected.
+
+| Page | What happened? | Fix
+| :-- | :-- | :--
+Add/edit items | n/a | n/a
+Links | n/a | n/a 
+Review form | n/a | n/a 
+Product details functions | n/a | n/a 
+Cart Functions | n/a | n/a 
+Secure Checkout Functions | n/a | n/a 
+Add/edit functions | n/a | n/a 
+My profile | n/a | n/a 
 
 <br>
 <br>
