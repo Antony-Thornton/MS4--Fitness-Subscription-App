@@ -14,7 +14,10 @@ Full website testing can be seen below. For the main README cick <a href="https:
 -   [1. Testing](#testing)
     -   [1.1. Considerations](#considerations)
     -   [1.2 Code validation](#code)   
+-   [2. Refactor](#refactor)
 -   [2. Manual](#manual)
+
+
             
 
 
@@ -50,10 +53,20 @@ Add image of iphone se here
 
 Add image of 1440p here
 
+
+<a name="refactor"></a>
+
+## 1.2 Code Refactoring
+
+| Page | Change | Date
+| :-- | :-- | :--
+Home page | Images and text changed to match new style/content. | 05/06/2022
+
+
+
 <a name="code"></a>
 
-## 1.2 Code validation
-
+## 1.3 Code validation
 
 
 <br>
