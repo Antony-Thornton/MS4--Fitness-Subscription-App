@@ -187,6 +187,16 @@ body {
     font-size: large;
 }
 
+.product_name {
+    font-size: 2rem;
+}
+
+.product_price {
+    font-size: 1.5rem;
+    color: #198754;
+    padding-bottom: 5px;
+}
+
 
 /* Product Form */
 
