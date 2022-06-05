@@ -16,7 +16,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-6" style="margin-bottom: 10px;">
+        <div class="col-12 col-lg-6" style="margin-bottom: 50px;">
             <p class="text-muted">Please fill out the form below to contact us. All information is private and will not be shared with anyone.</p>
             <form class="form update-form" method="POST" action="{% url 'contact_form_post' %}">{% csrf_token %}
                 <div class="mb-3">
@@ -34,7 +34,7 @@
                     </div>
                 </div>
             <button class="btn btn-success form_post_btn">Submit Form</button>    
-            <button class="btn btn-success form_reset_btn">Reset</button>  
+            <button class="btn btn-danger form_reset_btn">Reset</button>  
             </form>
         </div>
     </div>
