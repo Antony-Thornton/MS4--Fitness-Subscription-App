@@ -49,7 +49,7 @@
                         </th>
                         <td>
                             {% for item in order.lineitems.all %}
-                            {{ item.quantity }} @ ${{ item.product.price }} each
+                            {{ item.quantity }} @ £{{ item.product.price }} each
                             {% endfor %}
                         </td>
                         </tr>
