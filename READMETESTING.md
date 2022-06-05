@@ -82,6 +82,11 @@ Contact | admin.py | Ok
 || models.py | Ok
 || urls.py | Ok
 || views.py | Ok
+Main App | asgi.py | Ok
+|| settings.py | Ok
+|| urls.py | Ok
+|| wsgi.py | Ok
+
 
 
 
