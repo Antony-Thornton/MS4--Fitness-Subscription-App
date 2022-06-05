@@ -181,12 +181,6 @@ body {
     color:#198754;
 }
 
-
-.test {
-    color: purple;
-    font-size: large;
-}
-
 .product_name {
     font-size: 2rem;
 }
@@ -196,6 +190,29 @@ body {
     color: #198754;
     padding-bottom: 5px;
 }
+
+
+.form_post_btn {
+    margin: 1px; 
+    background-color: Green;
+    width: 120px;
+    border-color: green;
+}
+
+.form_reset_btn {
+    margin: 1px; 
+    background-color: red;
+    width: 120px;
+    border-color: red;
+}
+
+.qty_increase {
+    background-color: green;
+}
+.qty_decrease {
+    background-color: red;
+}
+
 
 
 /* Product Form */

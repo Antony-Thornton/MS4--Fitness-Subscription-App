@@ -52,7 +52,7 @@
                                 <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}"> {% csrf_token %} <div class="form-group">
                                     <div class="input-group">
                                       <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" style="background-color: red;" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                        <button class="decrement-qty btn btn-sm btn-black rounded-0 qty_decrease" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                           <span>
                                             <i class="fas fa-minus fa-sm"></i>
                                           </span>
@@ -60,7 +60,7 @@
                                       </div>
                                       <input class="form-control form-control-sm qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                       <div class="input-group-append">
-                                        <button class="increment-qty btn btn-sm btn-black rounded-0" style="background-color: green;" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                        <button class="increment-qty btn btn-sm btn-black rounded-0 qty_increase" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                           <span>
                                             <i class="fas fa-plus fa-sm"></i>
                                           </span>
@@ -68,11 +68,11 @@
                                       </div>
                                     </div>
                                     </div>
-                                    <button style="background-color: green; color: white;">
-                                        <a class="update-link text-info">Update Qty
+                                    <button class="btn btn-secondary">
+                                        <a class="">Update Qty
                                         </a>
                                     </button>
-                                        <a href="{% url 'remove_from_cart' item.item_id %}" class="text-info" style="float: right;" id="remove_{{ item.item_id }}">
+                                        <a href="{% url 'remove_from_cart' item.item_id %}" class="btn btn-danger" style="float: right;" id="remove_{{ item.item_id }}">
                                             Delete Item
                                         </a>
                                   </td>
@@ -94,8 +94,8 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn btn-success" style="margin: 1px; background-color: blue;" title="Course Provider"> <i class="fas fa-chevron-left"></i> Keep Shopping</a>
-                            <a href="{% url 'checkout' %}" class="btn btn-success" style="margin: 1px; background-color: gold; color: black;" title="Course Provider"> <i class="fas fa-chevron-left"></i> Secure Checkout</a>
+                            <a href="{% url 'products' %}" class="btn btn-primary" style="margin: 1px;" title="Course Provider">Keep Shopping</a>
+                            <a href="{% url 'checkout' %}" class="btn btn-warning" style="margin: 1px;; color: black;" title="Course Provider">Secure Checkout</a>
                         </td>
                     </tr>
                 </table>
@@ -107,7 +107,7 @@
                 <div>
                     <img src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG72.png" class="img-fluid" alt="Responsive image" style="width: 100% \9; ">
                 </div>
-                <a href="{% url 'products' %} " class="btn btn-success" style="margin: 1px; background-color: blue;" title="Course Provider"> <i class="fas fa-chevron-left"></i> Keep Shopping</a>
+                <a href="{% url 'products' %} " class="btn btn-success" style="margin: 1px; background-color: blue;" title="Course Provider">Keep Shopping</a>
             {% endif %}
         </div>
     </div>
