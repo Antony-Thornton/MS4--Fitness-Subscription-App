@@ -97,11 +97,11 @@ Home | apps.py | Ok
 || urls.py | Ok
 || views.py | Ok
 || widgets.py | Ok
-||  | Ok
-||  | Ok
-||  | Ok
-||  | Ok
-||  | Ok
+| Profiles | apps.py | Ok
+|| forms.py | Ok
+|| models.py | Ok
+|| urls.py | Ok
+|| views.py | Ok
 ||  | Ok
 ||  | Ok
 ||  | Ok
