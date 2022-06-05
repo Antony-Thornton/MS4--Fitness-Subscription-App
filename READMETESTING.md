@@ -163,7 +163,7 @@ products.html postload | 05/06/2022 | Pass | 1 warning (ES6)
 profile.html postload | 05/06/2022 | Pass | 1 warning (ES6)
 base.html postload | 05/06/2022 | Pass | n/a
 
-## Post Pep8 chenages testing
+## Post Pep8 changes testing
 Running basic checks to see if everything is still working as expected.
 
 | Page | What happened? | Fix
@@ -178,11 +178,16 @@ Add/edit functions | n/a | n/a
 My profile | n/a | n/a 
 
 <br>
+
+## Final Summary
+
+Code and website running as expected as of 05/06/2022 20:21. Happy to add the products themselves (leaving test items) and upload to Heroku.
+<br>
 <br>
 
 <a name="manual"></a>
 
-# 3. Manual Testing
+# 3. Post Heroku Manual Testing
 
 ## Navigation Bar
 All Pages:
