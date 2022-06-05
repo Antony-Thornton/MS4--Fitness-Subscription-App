@@ -104,25 +104,27 @@ Home | apps.py | Ok
 || views.py | Ok
 | Manage.py | Manage.py | Ok
 
+## Post Pep8 chenages testing
+Running basic checks to see if everything is still working as expected.
 
+| Page | What happened? | Fix
+| :-- | :-- | :--
+Add/edit items | Template Name variable in widgets.py was too long so I broke it onto the next line. This caused a pathing error when loading the pages. |  Need to confirm with mentor/community. Left as too long with a comment for the moment.
+Links | n/a | n/a 
+Review form | n/a | n/a 
+Product details functions | n/a | n/a 
+Cart Functions | n/a | n/a 
+Secure Checkout Functions | n/a | n/a 
+Add/edit functions | n/a | n/a 
+My profile | n/a | n/a 
 
-
-
-
-
-
-
+<br>
+<br>
 
 <a name="code"></a>
 
 ## 2.1 Code validation
 
-
-<br>
-
-## PEP8 Online results
-
-<br>
 
 ## HTML Validator results
 
