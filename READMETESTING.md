@@ -102,10 +102,7 @@ Home | apps.py | Ok
 || models.py | Ok
 || urls.py | Ok
 || views.py | Ok
-||  | Ok
-||  | Ok
-||  | Ok
-||  | Ok
+| Manage.py | Manage.py | Ok
 
 
 
