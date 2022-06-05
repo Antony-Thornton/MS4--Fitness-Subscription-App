@@ -1,4 +1,5 @@
-# Makes the contents available to the whole application. Needs to be added to the templates variable in the settings.py on the project level.
+# Makes the contents available to the whole application. Needs to be added to 
+# the templates variable in the settings.py on the project level.
 
 from decimal import Decimal
 from django.conf import settings
@@ -27,7 +28,6 @@ def cart_contents(request):
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
     else:
         delivery = 0
-        
 
     grand_total = delivery + total
 
@@ -74,7 +74,8 @@ def cart_contents(request):
 #         if total == 0:
 #             delivery = 0
 #         else:
-#             delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
+#             delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE
+#                                        /100)
     
 #     grand_total = delivery + total
     
