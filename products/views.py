@@ -30,7 +30,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -42,7 +42,7 @@ def all_products(request):
                 messages.error(request, "You didn't enter any search \
                     criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
             products = products.filter(queries)
@@ -82,6 +82,7 @@ def product_detail(request, product_id):
             review_form = ReviewForm()
     return render(request, 'products/product_detail.html', context)
 
+
 @login_required
 def add_product(request):
     """ Add a product to the store """
@@ -101,7 +102,7 @@ def add_product(request):
                 Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -148,7 +149,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
@@ -177,7 +178,7 @@ def delete_product(request, product_id):
 #         else:
 #             messages.error(request, 'There was an error with your form. \
 #                 Please resubmit')
-           
+
 #         return render(request, template, {})
 
 #     else:

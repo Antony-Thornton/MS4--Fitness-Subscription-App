@@ -86,6 +86,29 @@ Main App | asgi.py | Ok
 || settings.py | Ok
 || urls.py | Ok
 || wsgi.py | Ok
+Home | apps.py | Ok
+|| models.py | Ok
+|| urls.py | Ok
+|| views.py | Ok
+| Products | admin.py | Ok
+|| apps.py | Ok
+|| forms.py | Ok
+|| models.py | Ok
+|| urls.py | Ok
+|| views.py | Ok
+|| widgets.py | Ok
+||  | Ok
+||  | Ok
+||  | Ok
+||  | Ok
+||  | Ok
+||  | Ok
+||  | Ok
+||  | Ok
+||  | Ok
+
+
+
 
 
 
