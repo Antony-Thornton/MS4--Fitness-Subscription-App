@@ -35,7 +35,8 @@ def contact_form_post(request):
             ['antony_thornton_p@outlook.com'],
             )
 
-        email = EmailMessage('Test', 'Test', to=['antony_thornton_p@outlook.com'])
+        email = EmailMessage('Test', 'Test', to=['antony_thornton_p@ \
+            outlook.com'])
         email.send()
 
         messages.success(request, f'Thank you {message_name} for your message. We \
@@ -57,10 +58,9 @@ def contact_form_post(request):
         else:
             messages.error(request, 'There was an error with your form. \
                 Please resubmit')
-        
-        
+
         return render(request, template, {})
-        #  return render(request, template, {'message_name': message_name, }) 
+        #  return render(request, template, {'message_name': message_name, })
         #  If you were to stay on the contact page.
 
     else:

@@ -76,6 +76,16 @@ Checkout | init.py | Ok
  || views.py | Ok
  || webhook_handler.py | Ok
  || webhooks.py | Ok
+Contact | admin.py | Ok
+|| apps.py | Ok
+|| forms.py | Ok
+|| models.py | Ok
+|| urls.py | Ok
+|| views.py | Ok
+
+
+
+
 
 
 <a name="code"></a>
