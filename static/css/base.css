@@ -234,6 +234,11 @@ body {
   .container {
     max-width: 80%;
   }
+
+  .product_card {
+    max-width: 540px; 
+    padding-right: 50px;
+  }
 }
 
 /* fixed top navbar only on medium and up */
@@ -249,6 +254,7 @@ body {
     .header-container {
         padding-top: 164px;
     }
+
 }
 
 
