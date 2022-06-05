@@ -6,8 +6,12 @@ Fix resubmission error on form when refreshing page.
 
 
 1. Final CSS changes to pages
-2. Deploy to Heroku
+2. Deploy to Heroku - Debug set to false. Need to host images and css in AWS or image hosting platform.
 3. Wireframes
 4. README updates
 5. TESTING
 
+Update pictures/text on home page
+
+
+How does the examiner see super user features? Also how do they create an account if I havnt set up user authentication?
