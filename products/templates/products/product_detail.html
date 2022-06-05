@@ -91,29 +91,30 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2" style="margin-bottom: 50px;">
-                            <div class="row">
-                                <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                All Customer Reviews
-                                            </div>
-                                            <div class="card-body">                                                
-                                            {% for obj in object_list %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    All Customer Reviews
+                                </div>
+                                <div class="card-body">
+                                        {% for obj in object_list %}
                                             {% if obj.sku == product.name %}
-                                            <blockquote class="blockquote mb-0">
-                                                <p>{{ obj.review }}</p>
-                                            </blockquote>
+                                            <div class="card" style="margin-bottom: 10px;">
+                                                <div class="card-body">   
+                                                    <blockquote class="blockquote mb-0">
+                                                        <p>{{ obj.review }}</p>
+                                                    </blockquote>
+                                                </div>  
+                                            </div>
                                             {% endif %}
-                                            {% endfor %}
-                                    </div>
+                                        {% endfor %}
                                 </div>
                             </div>
-
                         </div>
-                        
-                        
                     </div>
                 </div>
+            </div>
         </div>
     </div>
         
