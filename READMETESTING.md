@@ -13,9 +13,9 @@ Full website testing can be seen below. For the main README cick <a href="https:
 
 -   [1. Testing](#testing)
     -   [1.1. Considerations](#considerations)
-    -   [1.2 Code validation](#code)   
--   [2. Refactor](#refactor)
--   [2. Manual](#manual)
+-   [2. Pre Herkou Checks](#refactor)
+    -   [2.1 Code validation](#code)   
+-   [3. Manual](#manual)
 
 
             
@@ -56,17 +56,22 @@ Add image of 1440p here
 
 <a name="refactor"></a>
 
-## 1.2 Code Refactoring
+## 2. Pre Herkou Checks
 
-| Page | Change | Date
+| App | .py file | Result
 | :-- | :-- | :--
-Home page | Images and text changed to match new style/content. | 05/06/2022
+Cart | apps.py | Ok
+| context.py | Ok - Ignored commented text
+| urls.py | Ok
+| Views.py | Ok
+
+
 
 
 
 <a name="code"></a>
 
-## 1.3 Code validation
+## 2.1 Code validation
 
 
 <br>
@@ -116,7 +121,7 @@ countryfield.js
 
 <a name="manual"></a>
 
-# 2. Manual Testing
+# 3. Manual Testing
 
 ## Navigation Bar
 All Pages:

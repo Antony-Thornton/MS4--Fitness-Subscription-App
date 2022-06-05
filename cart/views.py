@@ -52,7 +52,7 @@ def remove_from_cart(request, item_id):
     """ Remove a product from cart """
 
     try:
-        
+
         # item_id = int(request.POST.get('item_id'))
         cart = request.session.get('cart', {})
         product = Product.objects.get(pk=item_id)

@@ -1,4 +1,4 @@
-# Makes the contents available to the whole application. Needs to be added to 
+# Makes the contents available to the whole application. Needs to be added to
 # the templates variable in the settings.py on the project level.
 
 from decimal import Decimal
@@ -8,7 +8,7 @@ from products.models import Product
 
 
 def cart_contents(request):
-    
+
     cart_items = []
     total = 0
     product_count = 0
@@ -23,7 +23,7 @@ def cart_contents(request):
             'quantity': quantity,
             'product': product,
         })
-    
+
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
     else:
@@ -88,4 +88,3 @@ def cart_contents(request):
 #     }
 
 #     return context
-
