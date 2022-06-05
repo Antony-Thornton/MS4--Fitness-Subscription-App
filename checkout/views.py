@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, \
+    get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -11,13 +12,13 @@ from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 
-
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
-    try:    
+    try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
@@ -38,7 +39,7 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
-        cart = request.session.get('cart', {}) 
+        cart = request.session.get('cart', {})
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -50,7 +51,7 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
-        }   
+        }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -118,7 +119,6 @@ def checkout(request):
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
 
-    
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -127,6 +127,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """

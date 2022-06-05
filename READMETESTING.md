@@ -56,17 +56,26 @@ Add image of 1440p here
 
 <a name="refactor"></a>
 
-## 2. Pre Herkou Checks
+# 2. Pre Herkou Checks
+
+## PEP8 Online results
 
 | App | .py file | Result
 | :-- | :-- | :--
 Cart | apps.py | Ok
-| context.py | Ok - Ignored commented text
-| urls.py | Ok
-| Views.py | Ok
-
-
-
+ || context.py | Ok - Ignored commented text
+ || urls.py | Ok
+ || Views.py | Ok
+Checkout | init.py | Ok
+ || admin.py | Ok
+ || apps.py | Ok
+ ||forms.py | Ok
+ || models.py | Ok
+ || signals.py | Ok
+ || urls.py | Ok
+ || views.py | Ok
+ || webhook_handler.py | Ok
+ || webhooks.py | Ok
 
 
 <a name="code"></a>
