@@ -150,16 +150,23 @@ base.html
 ## CSS Validator results
 | Page | Date Checked | Result | Comment
 | :--- | :--- | :--- | :-- 
-checkout.css
-profile.css
-base.css
+checkout.css | 05/06/2022 | Pass | n/a
+profile.css | 05/06/2022 | Pass | n/a
+base.css | 05/06/2022 | Pass | n/a
 
 <br>
 
 ### JavaScript results
 | Page | Date Checked | Result | Comment
 | :--- | :--- | :--- | :-- 
-countryfield.js
+countryfield.js  | 05/06/2022 | Pass | 1 warning (ES6)
+stripe_elements.js  | 05/06/2022 | Pass | 2 Warnings (ES6)
+cart.html postload | 05/06/2022 | Pass | 1 warning (ES6)
+add_product.html postload | 05/06/2022 | Pass | 1 warning (ES6)
+product_detail.html postload | 05/06/2022 | Pass | n/a
+products.html postload | 05/06/2022 | Pass | 1 warning (ES6)
+profile.html postload | 05/06/2022 | Pass | 1 warning (ES6)
+base.html postload | 05/06/2022 | Pass | n/a
 
 
 <br>
