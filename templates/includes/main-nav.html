@@ -10,10 +10,10 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href=" {% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item link_hover">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item link_hover">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item link_hover">By Category</a>
+                <a href=" {% url 'products' %}" class="dropdown-item link_hover">All Products</a>
             </div>
         </li>
 
@@ -22,9 +22,9 @@
                 Nutrition Plans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="plan-link">
-                <a href="{% url 'products' %}?category=Vegan" class="dropdown-item">Vegan</a>
-                <a href="{% url 'products' %}?category=Vegetarian" class="dropdown-item">Vegetarian</a>
-                <a href="{% url 'products' %}?category=Vegan,Vegetarian" class="dropdown-item">All Plans</a>
+                <a href="{% url 'products' %}?category=Vegan" class="dropdown-item link_hover">Vegan</a>
+                <a href="{% url 'products' %}?category=Vegetarian" class="dropdown-item link_hover">Vegetarian</a>
+                <a href="{% url 'products' %}?category=Vegan,Vegetarian" class="dropdown-item link_hover">All Plans</a>
             </div>
         </li>
 
@@ -33,9 +33,9 @@
                 Exercise Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="excercise-link">
-                <a href="{% url 'products' %}?category=Cardio" class="dropdown-item">Cardio Equipment</a>
-                <a href="{% url 'products' %}?category=Weights" class="dropdown-item">Weights/Other</a>
-                <a href="{% url 'products' %}?category=Weights,Cardio" class="dropdown-item">All Equipment</a>
+                <a href="{% url 'products' %}?category=Cardio" class="dropdown-item link_hover">Cardio Equipment</a>
+                <a href="{% url 'products' %}?category=Weights" class="dropdown-item link_hover">Weights/Other</a>
+                <a href="{% url 'products' %}?category=Weights,Cardio" class="dropdown-item link_hover">All Equipment</a>
             </div>
         </li>
         <li class="nav-item dropdown">
