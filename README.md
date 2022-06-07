@@ -388,12 +388,14 @@ Video
 1. Log in to your Heroku Account
 2. Click create new app
 3. Name it and select closest region
-4. Go to resources tab and install the "Heroku Postgress" Add on (Free plan)
+4. Go to resources tab and install the "Heroku Postgres" Add on (Free plan)
 5. Go back to Gitpod and install pip3 install dj_database_url and psycopg2-binary
 6. Freeze requirements with pip3 freeze > requirements.txt
 
 ### Step 2 - Settings
 7. Settings.py and import dj_database_url
+
+        import dj_database_url
 8. Comment out default databases code
 
         DATABASES = { 'whatever you have in here in your settings'}
@@ -408,6 +410,21 @@ Video
 12. Import all product data by running (data in your admin tab):
     * python3 manage.py loaddata categories' In this case
     * python3 manage.py loaddata products' In this case
+
+        A note for creating your database if you didn't use fixtures
+When you come to follow this process for your milestone project, you may not have used a fixtures file to populate your database like the instructor did.
+If this is the case, manually re-creating your database when you come to deploy can take a considerable amount of time. Thankfully, there is a short process you can follow to download your local mysql database and then upload it to postgres:
+1. Make sure your manage.py file is connected to your sqlite3 database
+2. Use this command to backup your current database and load it into a db.json file:
+./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+3. Connect your manage.py file to your postgres database
+4. Then use this command to load your data from the db.json file into postgres:
+./manage.py loaddata db.json
+If you would like more information on this process along with a few handy tips, have a look at this DevTip on Slack.
+Video
+
+
+
 13. Create a super user to log in with
 
 ### Tentative steps
