@@ -26,7 +26,7 @@ SECRET_KEY = \
     'django-insecure-xeo#qrgx-tb+$)r9(awg#tecm$9w#ssf-)jw2t_s^d(=qb#(ly'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # False on deployment
+DEBUG = False  # False on deployment
 
 ALLOWED_HOSTS = ['the-veggie-guy-fitness','127.0.0.1', 'localhost']  # Covered in deployment videos
 
