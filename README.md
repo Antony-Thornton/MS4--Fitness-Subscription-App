@@ -474,7 +474,7 @@ To prevent 500 errors during login on a deployed site you need to make a one lin
         ALLOWED_HOSTS = ['Heroku app path', 'localhost'] (local for gitpod server)
 24. Add and commit changes with push
 25. Push to heroku using
-
+    * git push heroku main  - Worked for me instead of master see <a href="https://stackoverflow.com/questions/63363085/ip-address-mismatch-on-signing-into-heroku-cli" target="_blank">for</a>
         git push heroku master
     * You may need to initialize your herokuy git remote if you created your app on the website rather than with the CLI and pu
 
