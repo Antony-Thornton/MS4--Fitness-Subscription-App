@@ -361,6 +361,29 @@ In the terminal you need to create the app for the page
 # 6. Deployment
 #### [Go To Top](#table-of-contents "Go To Top")
 
+
+Deployment Notes from course:
+
+If you get the error below during the steps to deployment:
+* django.db.utils.OperationalError: FATAL: role "somerandomletters" does not exist
+
+Please run the following command in the terminal to fix it:
+unset PGHOSTADDR
+
+A note for creating your database if you didn't use fixtures
+When you come to follow this process for your milestone project, you may not have used a fixtures file to populate your database like the instructor did.
+If this is the case, manually re-creating your database when you come to deploy can take a considerable amount of time. Thankfully, there is a short process you can follow to download your local mysql database and then upload it to postgres:
+1. Make sure your manage.py file is connected to your sqlite3 database
+2. Use this command to backup your current database and load it into a db.json file:
+./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+3. Connect your manage.py file to your postgres database
+4. Then use this command to load your data from the db.json file into postgres:
+./manage.py loaddata db.json
+If you would like more information on this process along with a few handy tips, have a look at this DevTip on Slack.
+Video
+
+
+
 ### Step 1 - Create a Heroku App
 1. Log in to your Heroku Account
 2. Click create new app
@@ -390,6 +413,68 @@ In the terminal you need to create the app for the page
 ### Tentative steps
 14. Comment out step 9 and un comment step 8
 15. Git push changes
+
+
+To prevent 500 errors during login on a deployed site you need to make a one line addition to your settings file.
+
+    ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+### Step 3 - Database set up
+16. Add an if statement in the settings.py file that selects the database
+
+        if 'DATABASE_URL' in os.environ:
+            DATABASES = {
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+        else:
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+                }
+            }
+
+17. Install gunicorn using the terminal and freeze requirements
+18. Create a Procfile in the main area (same as readme) and put
+
+        web:gunicorn fitness_subscription_app.wgsi:application
+19. In the terminal write heroku login which should spawn a login message. Look for any instructions in the terminal
+20. Login if needed
+21. Disable static files being loaded so that Heroku doesnt try when the app is deployed
+    
+        heroku config:set DISABLE_COLLECTSTATIC=1
+22. You may get an error message about a missing flag in the terminal. Run the same line as above but with --app and the app name at the end
+        heroku config:set DISABLE_COLLECTSTATIC=1 --app fitness_subscription_app
+23. Add host names to allowed hosts in settings.py
+
+        ALLOWED_HOSTS = ['Heroku app path', 'localhost'] (local for gitpod server)
+24. Add and commit changes with push
+25. Push to heroku using
+
+        git push heroku master
+    * You may need to initialize your herokuy git remote if you created your app on the website rather than with the CLI and pu
+
+        heroku git:remote -a 'Heroku app name'
+
+    Then
+
+        git push heroku master
+
+26. A url should appear in the teminal which will load your page without the static files (css etc)
+27. In Heroku site:
+    * Go to the deploy page
+    * Connect to github and add repository name you want to connect to and then click connect.
+    * Enable automatic deploys on the same page
+28. Get a secret key from an online secret key generator
+29. In heroku on the settings page add it to config vars as 'SECRET_KEY'
+30. In settings.py replace the secret key above DEBUG with
+
+        SECRET_KEY = os.environ.get('SECRET_KEY', '')
+
+31. Change DEBUG to 
+
+        DEBUG = 'DEVELOPMENT' in os.environ
+32. Push changes to git hub
 
 
 

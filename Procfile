@@ -1,0 +1,1 @@
+web:gunicorn fitness_subscription_app.wgsi:application
