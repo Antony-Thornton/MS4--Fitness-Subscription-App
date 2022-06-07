@@ -28,7 +28,7 @@ SECRET_KEY = \
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False  # False on deployment
 
-ALLOWED_HOSTS = ['the-veggie-guy-fitness','127.0.0.1', 'localhost']  # Covered in deployment videos
+ALLOWED_HOSTS = ['the-veggie-guy-fitness', '127.0.0.1', 'localhost']  # Covered in deployment videos
 
 
 # Application definition
