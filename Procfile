@@ -1,1 +1,1 @@
-web: gunicorn fitness_subscription_app.wgsi
+web: gunicorn fitness_subscription_app.wgsi:application
