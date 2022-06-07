@@ -456,6 +456,13 @@ To prevent 500 errors during login on a deployed site you need to make a one lin
 
         web:gunicorn fitness_subscription_app.wgsi:application
 19. In the terminal write heroku login which should spawn a login message. Look for any instructions in the terminal
+    * You may get an error like I did where the popup didnt load. Follow these <a href="https://stackoverflow.com/questions/63363085/ip-address-mismatch-on-signing-into-heroku-cli" target="_blank">steps</a>
+        1. Navigate to https://dashboard.heroku.com/account/applications
+        2. In Authorizations click on create authorization button
+        3. Add description in pop up eg.heroku cli and leave expire after blank if you dont want it to expire
+        4. You will get authorization token
+        5. in cli run heroku login -i
+        6. when it prompts for password enter the authoriation token
 20. Login if needed
 21. Disable static files being loaded so that Heroku doesnt try when the app is deployed
     
