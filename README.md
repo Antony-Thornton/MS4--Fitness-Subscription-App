@@ -361,6 +361,36 @@ In the terminal you need to create the app for the page
 # 6. Deployment
 #### [Go To Top](#table-of-contents "Go To Top")
 
+### Step 1 - Create a Heroku App
+1. Log in to your Heroku Account
+2. Click create new app
+3. Name it and select closest region
+4. Go to resources tab and install the "Heroku Postgress" Add on (Free plan)
+5. Go back to Gitpod and install pip3 install dj_database_url and psycopg2-binary
+6. Freeze requirements with pip3 freeze > requirements.txt
+
+### Step 2 - Settings
+7. Settings.py and import dj_database_url
+8. Comment out default databases code
+
+        DATABASES = { 'whatever you have in here in your settings'}
+
+9. Replace with
+
+        DATABASES = {
+            'default': dj_databas_url.parse('''''ADD URL HERE''''' See below)
+        }
+10. Get the url from heroku in the settings tab then Config Vars
+11. Run migrations (python3 manage.py showmigrations)
+12. Import all product data by running (data in your admin tab):
+    * python3 manage.py loaddata categories' In this case
+    * python3 manage.py loaddata products' In this case
+13. Create a super user to log in with
+
+### Tentative steps
+14. Comment out step 9 and un comment step 8
+15. Git push changes
+
 
 
 
