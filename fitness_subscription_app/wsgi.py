@@ -11,7 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'fitness_subscription_app.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fitness_subscription_app.settings')  # noqa: E501
 
 application = get_wsgi_application()
