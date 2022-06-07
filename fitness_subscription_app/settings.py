@@ -28,7 +28,8 @@ SECRET_KEY = \
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False  # False on deployment
 
-ALLOWED_HOSTS = ['the-veggie-guy-fitness', '127.0.0.1', 'localhost']  # Covered in deployment videos
+ALLOWED_HOSTS = ['the-veggie-guy-fitness', '127.0.0.1', 'localhost']  
+# Covered in deployment videos
 
 
 # Application definition
@@ -144,20 +145,16 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation. \
-            UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa: E501
     },
     {
-        'NAME': 'django.contrib.auth.password_validation. \
-            MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa: E501
     },
     {
-        'NAME': 'django.contrib.auth.password_validation. \
-            CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa: E501
     },
     {
-        'NAME': 'django.contrib.auth.password_validation. \
-            NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa: E501
     },
 ]
 
