@@ -129,23 +129,17 @@ WSGI_APPLICATION = 'fitness_subscription_app.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://bnrqwmknecvhdd:92a822728d6c4c46fa31091169cbcad604143b6a4368bf61fbe437ca2a53d918@ec2-34-246-227-219.eu-west-1.compute.amazonaws.com:5432/d2fk992uta0s3q')
-}
-
-
-
-# if 'DATABASE_URL' in os.environ:
-#     DATABASES = {
-#          'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#      }
-# else:
-#     DATABASES = {
-#          'default': {
-#              'ENGINE': 'django.db.backends.sqlite3',
-#              'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#          }
-#      }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+         'default': {
+             'ENGINE': 'django.db.backends.sqlite3',
+             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+         }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
