@@ -39,8 +39,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search \
-                    criteria!")
+                messages.error(request, "You didn't enter any search criteria!")  # noqa: E501
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(
@@ -98,8 +97,7 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. \
-                Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')  # noqa: E501
     else:
         form = ProductForm()
 
@@ -127,8 +125,7 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. \
-                Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')  # noqa: E501
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -176,8 +173,7 @@ def delete_product(request, product_id):
 #             request.session['save_info'] = 'save-info' in request.POST
 #             return render(request, template, {})
 #         else:
-#             messages.error(request, 'There was an error with your form. \
-#                 Please resubmit')
+#             messages.error(request, 'There was an error with your form. Please resubmit')  # noqa: E501
 
 #         return render(request, template, {})
 

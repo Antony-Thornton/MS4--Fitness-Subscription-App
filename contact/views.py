@@ -35,13 +35,10 @@ def contact_form_post(request):
             ['antony_thornton_p@outlook.com'],
             )
 
-        email = EmailMessage('Test', 'Test', to=['antony_thornton_p@ \
-            outlook.com'])
+        email = EmailMessage('Test', 'Test', to=['antony_thornton_p@outlook.com'])  # noqa: E501
         email.send()
 
-        messages.success(request, f'Thank you {message_name} for your message. We \
-                         will get back to you as soon \
-                         as possible via {message_email}.')
+        messages.success(request, f'Thank you {message_name} for your message. We will get back to you as soon as possible via {message_email}.')  # noqa: E501
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -56,8 +53,7 @@ def contact_form_post(request):
             request.session['save_info'] = 'save-info' in request.POST
             return render(request, template, {})
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please resubmit')
+            messages.error(request, 'There was an error with your form. Please resubmit')  # noqa: E501
 
         return render(request, template, {})
         #  return render(request, template, {'message_name': message_name, })
