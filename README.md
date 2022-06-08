@@ -501,10 +501,133 @@ To prevent 500 errors during login on a deployed site you need to make a one lin
         DEBUG = 'DEVELOPMENT' in os.environ
 32. Push changes to git hub
 
+### Step 4 - Amazon Web Services
+
+Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20changes%20sheet.pdf
+33. Log into/create an account on aws.amazon.com
+34. Under services find s3 and create a bucket
+35. Name the bucket so it matches your project and select nearest region
+36. Uncheck block all public access and acknowledge it as public
+37. Create bucket
+38. click on the bucket and go to properties tab
+39. turn on static website hosting
+40. Update index document with "index.html"
+41. Erro document with "error.html"
+42. Save
+43. Go to permissions tab
+44. In the Cross-origin resource sharing (CORS) add in the configiration below. This allows the website to communicate with S3
+        CORS configuration
+
+        Important
+        AWS updated their systems after this video was made and the code from the video above for the CORS configuration no longer works.
+
+        Please use the following code for your CORS configuration instead:
+
+        [
+            {
+                "AllowedHeaders": [
+                    "Authorization"
+                ],
+                "AllowedMethods": [
+                    "GET"
+                ],
+                "AllowedOrigins": [
+                    "*"
+                ],
+                "ExposeHeaders": []
+            }
+        ]
+
+45. Under bucket policy
+    * Click policy generator
+        * Type = "S3 bucket policy"
+        * Principle = *
+        * Action = GetObject
+        * Amazon Resource Name (ARN) equals the line from the bucket page e.g. "arn:aws:s3:::the-veggie-guy-fitness"
+        * Click Add statement
+        * Click Generate Policy
+        * Copy JSON code that appears
+        * Paste into the bucket policy editor field
+        * Add a /* at the end of the resource line
+
+                  "Resource": "arn:aws:s3:::the-veggie-guy-fitness/*",
+        * Click save
+46. Under Access control list (ACL) update Public access to list objects to list
+    * I had to update ACL's List to do this.
+47. In the services and or search bar look for IAM resources 
+48. Create a group by clicking "User Groups" on the left 
+    * Name the group
+    * Click Create Group as we dont have policies to attach
+49. Click  policies on the left
+    * Create Policy
+    * JSON tab
+    * Import Manage Policy
+    * Search for s3 and import "AmazonS3FullAccess"
+    * Get the bucket policy ARN (Step 45)
+    * Replace the * in resource with this
+
+            "Resource": [
+                "arn:aws:s3:::the-veggie-guy-fitness",
+                "arn:aws:s3:::the-veggie-guy-fitness/*"
+            ]
+    * Click next and review policy
+    * Add a name (app name from heroku with -policy at the end) and description
+    * Click create policy
+50. Go to groups and click on the earlier created group. 
+51. Follow steps from the link noted at the start of step 4
+52. Creat a user from the users page
+    * Click add users
+    * Name it e.g. tvgf-user
+    * Give them programmatic access
+    * Click next
+    * Put the user in the group
+    * Click through all the next buttons
+    * Download and SAVE THE CSV SOMEWHERE SECURE AS THIS CANNOT BE DONE AGAIN
+
+### Step 5 - In Gitpod (connect django to s3)
+
+53. Install "pip3 install boto3" and "pip3 install django-storages"
+54. "pip3 freeze > requirements.txt"
+55. In settings.py add storages under INSTALLED_APPS =
+56. Under static files comment in settings.py add
+    * The keys come from the csv you downloaded. DO NOT SHARE WITH ANYONE.
+        * Add them to your Heroku Config Vars
+        * USE_AWS also goes in there with a value of true
+
+                if 'USE_AWS' in os.environ:
+                    AWS_STORAGE_BUCKET_NAME = 'Add bucket name here' i.e. the-veggie-guy-fitness
+                    AWS_S3_REGION_NAME = 'Add name here' i.e. EU (London) eu-west-2
+                    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+                    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+                    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+57. In config vars remove the DISABLE_COLLECTSTATIC variable as it is no longer needed
+58. Create a new .py file called custom_storages.py in the main section and paste in 
+
+        from django.conf import settings
+        from storages.backends.s3boto3 import S3Boto3Storage
 
 
+        class StaticStorage(S3Boto3Storage):
+            location = settings.STATICFILES_LOCATION
 
 
+        class MediaStorage(S3Boto3Storage):
+            location = settings.MEDIAFILES_LOCATION
+
+59. In settings.py
+    * Add the below under the if statement
+
+                # Static and media files
+                STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+                STATICFILES_LOCATION = 'static'
+                DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+                MEDIAFILES_LOCATION = 'media'
+
+                # Override static and media URLs in production
+                STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+                MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+60. Add and commit changes
 
 
 # 7. End Product
