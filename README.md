@@ -663,6 +663,7 @@ Django Setup
     * I then tried to use the site but was getting a CSRF error message.
     * I treid fixing this by clearing the cache and accidently tabbed back into the main branch which was now working
     * Not sure if this was the actual fix or not at this point
+* Error when build loaded - https://stackoverflow.com/questions/61247546/django-core-exceptions-improperlyconfigured-youre-using-the-staticfiles-app-wi
 
 
 ### Bugs to be fixed
