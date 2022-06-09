@@ -698,6 +698,13 @@ Django Setup
     * I then tried to use the site but was getting a CSRF error message.
     * I treid fixing this by clearing the cache and accidently tabbed back into the main branch which was now working
     * Not sure if this was the actual fix or not at this point
+* Error after deployment with submitting checkout form. The code would error because it couldnt authenticate a user. It just so happened that I was testing WHILE logged in and forgot to test when not logged in.
+
+        if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_profile = profile
+        order.save()
 
 
 ### Bugs to be fixed
