@@ -629,6 +629,15 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
                 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 60. Add and commit changes
 
+### Step 6 - Media files in AWS S3
+61. Add cache control under the IF statement
+
+        # Cache control
+        AWS_S3_OBJECT_PARAMETERS = {
+            'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+            'CacheControl': 'max-age=94608000',
+        }
+
 
 # 7. End Product
 #### [Go To Top](#table-of-contents "Go To Top")
