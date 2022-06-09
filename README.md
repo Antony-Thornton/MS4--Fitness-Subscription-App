@@ -4,7 +4,7 @@ Welcome to my fourth project. This project is a simple online Fitness Subscripti
 
 This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile. They will also be able to purchase items from the shop. 
 
-A live website can be found <a href="" target="_blank">here</a>.
+A live website can be found <a href="https://the-veggie-guy-fitness.herokuapp.com/" target="_blank">here</a>.
 
 ![index web](static/assets/images/readme_lead_image.jpg)
 
@@ -133,11 +133,37 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 * The home page is the main landing page for the site. When the user visits the page, they should be able to understand what the website is about and what it can offer them.
 * The page presents information as its primary feature.  
 
+## Products Pages
+
+
+## Product Details Pages
+
+
+
+## Contact Page
+
+## Shopping Cart Page
+
+## Checkout Page
+
+## Checkout Success Page
+
+## Profile Page
+
+## Product Management Page
+
 
 
 ## Features left to implement
 * Load the cookbook website into this site - Ideally the cookbook and the fitness app will be on the same site so the user profile can accomodate both and it becomes a community hub.
 * Star Rating system
+* Email functionailty partially set up. If time permits finish this off
+* User contact submission. Allow a super user to:
+    * See all contact form messages
+    * Reply to all messages
+    * Leave comments on messages for other super users
+* Add a page loading between checkout and checkout success page
+
 
 <a name="technologies-used"></a>
 
