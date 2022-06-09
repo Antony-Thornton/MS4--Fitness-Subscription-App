@@ -630,13 +630,39 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 60. Add and commit changes
 
 ### Step 6 - Media files in AWS S3
-61. Add cache control under the IF statement
+61. Add cache control under the IF statement and push changes
+
 
         # Cache control
         AWS_S3_OBJECT_PARAMETERS = {
             'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
             'CacheControl': 'max-age=94608000',
         }
+62. Go to S3 on AWS
+63. On the buckets page where your static goes under objects create a folder called media
+64. Inside click upload and add all of your files
+    * Make sure you grant public read access
+65. Login to admin
+66. Go to email addresses of user and click verified for the users
+    * This step is needed because the email authentication is set to none
+
+### Step 7 - Stripe Keys
+67. Log into your stripe account
+68. Go to developers and click API Keys
+69. Get the pushable key
+70. Go to your config vars in settings on heroku
+71. Add it in as STRIPE_PUBLIC_KEY
+72. Do the same for the STRIPE_SECRET_KEY
+73. Go to webhooks and clicking add endpoint
+    * Add the website url with /checkout/wh/ at the end and a description
+    * Click receive all events
+
+            https://the-veggie-guy-fitness.herokuapp.com/checkout/wh/
+74. Get the siginng secret and add it to heroku config vars
+    * STRIPE_WH_SECRET
+
+
+
 
 
 # 7. End Product
