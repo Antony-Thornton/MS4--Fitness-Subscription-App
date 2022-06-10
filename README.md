@@ -293,7 +293,7 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 
 In order to reduce content in this README full testing has been documented in a seperate README.
 
-See <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">here</a> for full testing
+See <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">here</a> for full testing.
 
 <br>
 
@@ -412,7 +412,7 @@ See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" 
     * For this I deleted; "OpenID" and "tests"
 3. Add a base.html file under the "/templates/allauth" folder path
 4. In the base.html file you can either create your own or copy in a template
-    * For this I will be using <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap5 </a>
+    * For this I will be using <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" target="_blank">Bootstrap5 </a>
 5. Add another meta tag - < meta http-equiv="X-UA-Compatible" content="ie=edge" >
     * This will support older internet explorer windows
 6. Move the scripts to the top header
@@ -463,9 +463,6 @@ In the terminal you need to create the app for the page
 
 10. Save changes and test its working by loading a new server
     * When I first did this I had a few files out of place so was getting "ModuleNotFoundError: No module named 'home/'" error
-
-
-
 
 
 
