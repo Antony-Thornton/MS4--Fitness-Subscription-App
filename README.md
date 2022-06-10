@@ -1,12 +1,12 @@
 # The Veggie Guy Fitness App
-## Introduction
+# Introduction
 Welcome to my fourth project. This project is a simple online Fitness Subscription Application that allows users to manage their own recipes remotely. This will use languages such as Django, Python, HTML, CSS and JavaScript.
 
 This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile. They will also be able to purchase items from the shop. 
 
 A live website can be found <a href="https://the-veggie-guy-fitness.herokuapp.com/" target="_blank">here</a>.
 
-![index web](static/assets/images/readme_lead_image.jpg)
+![index web](static/assets/images/site_images/responsive.jpg)
 
 # Table of Contents
 
@@ -51,6 +51,8 @@ The website should:
 * Promote a brand of fitness recipe's(In this case books) and other fitness related products
 * Allow the user to create a profile
 * Allow the user to purchase fitness related products
+* Generate revenue for the site owner
+* Empower the site owner to manage orders, products, reviews and entries in the contact us form
 
 ## User Goals:
 
@@ -122,35 +124,111 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 
 ## Navigation
 
-* The navigation bar has two layouts. One view for a desktop and the other for mobile.
-
-* The desktop view uses a traditional layout utilising materialisecss default navigation. The user should clearly find all navigational pages at the top right.
-
-* As with the desktop view the mobile uses existing CSS code but compresses the links into a collapsible element at the top right. The user should be able to open the element and see all the available links.
+* The navigation bar has two layouts
+    * One view for a desktop and the other for a mobile/tablet
+* The desktop view uses a traditional layout utilising bootstrap CSS
+    * The user should clearly find all navigational pages at the top of the page
+* As with the desktop view the mobile utalizes existing CSS code but compresses the links into a collapsible element at the top of the header
+    * The user should be able to open the element and see all the available links
+* Additional navigation functionality will allow registered users or super users access to additional information through a "My Account" navigation drop down:
+    * Product management (Super)
+    * My profile (All)
+    * Login
+    * Signout (If loged in)
+* Cart functionality will be added so the user can see what products they have added to their cart
+* The header will have links to:
+    * Home page
+    * All products
+    * Books only
+    * Equipment only
+    * A feature complete cookbook (external site)
+    * Contact us form
+* The footer will link to additional sources that the user may find interesting and is not a critical feature of the site objectives
 
 ## Home Page
 
-* The home page is the main landing page for the site. When the user visits the page, they should be able to understand what the website is about and what it can offer them.
-* The page presents information as its primary feature.  
+* The home page is the main landing page for the site
+* When the user visits the page, they should be able to understand what the website is about and what it can offer them
+* The page directs the user to products that the user may find interesting based on 3 categories
+    * All products
+    * Nutrition plans/books
+    * Exercise equipement
 
 ## Products Pages
-
+* There will be a page for all products, books, exercise equipement
+    * The functionality/templates for each of these pages is the same apart from the data pulled in the background
+* This page will:
+    * Show all the products from both catergories in one page with the user able to click on the product for more information
+    * Super users will be able to edit/delete products on this page also
+    * Users will be able to sort the products using a drop down at the top right
+    * The image stands as the main link to the product details page detailed below
 
 ## Product Details Pages
-
-
+* This page is designed to detail information about the product selected on the products page
+* Product information:
+    * Product Name
+    * Product Price
+    * Product Description
+    * Product Reviews
+* Regular User functionailty:
+    * Change quantity of product
+    * Add the specified quantity to the cart
+    * Leave a review
+* Super users will be able to:
+    * Edit products (takes them to another page)
+    * Delete products (takes them back to the products page)
 
 ## Contact Page
+* The contact page is designed for users to submit feedback to the site owner
+* The user needs to enter:
+    * Full name
+    * Email Address
+    * Message
+* The information submitted will go to the admin page of the site which the owner/super user has access to
 
 ## Shopping Cart Page
+* The shopping cart details all of the products added to the page by the user
+    * If none have been submited an empty cart will be displayed with a keep shopping button
+* The user will be able to:
+    * Update quanitity of products they have added down to 1 only
+    * Delete items they have added
+    * See the price and quantity of the items selected as well as the grand total and delivery fee (10%)
+    * The user can then either keep shopping with a button or head to secure checkout detailed below
+
 
 ## Checkout Page
+* The checkout page is deseigned to display a small order summary of the items the user wants to purchase
+* The page should display a form for the user to complete with compulsary fields
+* The user should be able to adjust the cart (directing them back to the cart)
+* Once payment/delivery info is added the user should be able to complete order
+* The page should then submit information to the admin database
+* The user should be able to save their information or login/create a profile
+    * If a profile is authenticated the order should be stored under that user's account for later refferal
+* Once submitted the page will then display a checkout success page below
 
 ## Checkout Success Page
+* The checkout page should summarise the order in key categories:
+    * Order Information - Date, time and order number
+    * Order Summary - Summary of the checkout/cart pages
+    * Delivery information - Name, address etc
+    * Billing informtaion - Order total, fee and grand total
 
 ## Profile Page
+* The profile page should summarise the stored delivery information of the user with the ability to update the information
+* The users order history should be available and the order number should take them to a replica of the checkout success page for that specific order
+
 
 ## Product Management Page
+* The product management page allows super users to add a new product only
+* Current available fields:
+    * Category
+    * Sku
+    * Name
+    * Description
+    * Price (price set to a maximum of 6 digits currently)
+    * Rating
+    * Image URL
+    * Select Image from desktop folders
 
 
 
@@ -163,6 +241,15 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
     * Reply to all messages
     * Leave comments on messages for other super users
 * Add a page loading between checkout and checkout success page
+* Change the formatting of the login/register/sign out pages to match the rest of the site
+* Add a page for super users to:
+    * See reviews
+    * Reply to reviews
+    * Delete reviews
+    * See contact form information
+    * Reply with an email to contact form information
+    * Add notes to contact form information
+* Loading javascript between checkout and checkout success
 
 
 <a name="technologies-used"></a>
@@ -180,8 +267,8 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
     * The project uses Python
 * <a href="https://www.djangoproject.com/" target="_blank">Django</a>
     * The project uses Django web frameworks
-* <a href="https://materializecss.com/" target="_blank">Materialize</a>
-    * The project uses Materialize CSS structuring
+* <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+    * The project uses Bootstrap structuring
 * <a href="https://balsamiq.com/wireframes/" target="_blank">Balsamiq Wireframes</a>
     * Balsamiq was used to create the wireframes during the design process
 * <a href="https://www.gitpod.io/" target="_blank">Gitpod</a>
@@ -197,8 +284,7 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 * <a href="https://stripe.com/" target="_blank">Stripe</a>
     * For live and testing payment methods. During development I used a specific set of card details.
 
-
-#### [Go To Top](#table-of-contents "Go To Top")
+<br>
 
 <a name="testing"></a>
 
@@ -209,6 +295,7 @@ In order to reduce content in this README full testing has been documented in a 
 
 See <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">here</a> for full testing
 
+<br>
 
 
 <a name="development-cycle"></a>
@@ -687,9 +774,7 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 74. Get the siginng secret and add it to heroku config vars
     * STRIPE_WH_SECRET
 
-
-
-
+<br>
 
 # 7. End Product
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -700,9 +785,7 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 # 8. Known Bugs
 #### [Go To Top](#table-of-contents "Go To Top")
 
-### Breakdown
 
-Django Setup
 * Issue with Django versions causing log in issues for admin. See development cycle section
 * Issue where I was getting an error with clicking on site link
     * I had to use this <a href="https://stackoverflow.com/questions/34548768/django-no-such-table-exception" target="_blank">link</a> to unmigrate py files then megrate again
@@ -735,14 +818,13 @@ Django Setup
 
 ### Bugs to be fixed
 * "GET /static/profiles/js/countryfield.js HTTP/1.1" 404 1709
+    * Javascript added to postload
 * "GET /favicon.ico HTTP/1.1" 404 2839
 * Emails not sending in terminal
-* Webhooks not succeeding in stripe
+* Webhooks not succeeding every time in stripe
+* Heroku app does not load on Am I responsive sites. Suspect this is an app thing as the development link works.
 
-
-
-
-
+<br>
 
 <a name="credits"></a>
 
@@ -752,21 +834,23 @@ Django Setup
 
 ## Code
 
-None at time of writing
-
-# ****** Update at the end of project if needed ******
+* Code institure for design inspiration
+* Stripe for stripe element styling and functionality
+* Bootstrap for CSS styling and structure
+* Django for the framework
 
 
 ## Content
 
 * <a href="https://www.pexels.com/" target="_blank">For pictures</a> - Artists can be found <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/tree/main/static/assets/images/site%20images" target="_blank">here</a>.
-* For some of the diet plans/books I used images found online. For more information on each of the books seen please see the link in the description of the product.
+* For some of the diet plans/books I used images found online. Initially I had the links added but during deployment I lost this information.
 * Contact form Email - https://www.youtube.com/c/Codemycom
 
 
 ## Project Acknowledgements
 
-<a href=""></a>
+
+* Code Institute - For all course material and on going support
 
 * Code Institute Tutor Support - For directing me to the correct solutions for any bugs and problems with my project.
 
