@@ -35,8 +35,6 @@ This project is designed to extend "The Veggie Guy" brand by offering a fitness 
 
 The website is primarily built with influence from code insititues mini project which utilises the bootstrap framework. Credit for the UX design is due for both parties. 
 
-<br>
-
 <a name="strategy"></a>
 
 ## 1.1 Strategy
