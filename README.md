@@ -41,8 +41,6 @@ The website is primarily built with influence from code insititues mini project 
 #### [Go To Top](#table-of-contents "Go To Top")
 
 ## Project Goals
-The main goal of this project is to allow the user to 
-
 The website should:
 * Promote a brand of fitness recipe's(In this case books) and other fitness related products
 * Allow the user to create a profile
