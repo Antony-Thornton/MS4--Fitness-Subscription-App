@@ -315,6 +315,8 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 
 In order to reduce content in this README full testing has been documented in a seperate README.
 
+The app has been tested on a desktop, Samsung s9+ and an ipad. If you notice any bugs/issues please feel free to contact me.
+
 See <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">here</a> for full testing.
 
 <br>
