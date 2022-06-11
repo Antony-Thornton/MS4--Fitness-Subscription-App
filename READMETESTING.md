@@ -194,16 +194,16 @@ All Pages:
 
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Home
-All products
-Nutrition Plans
-Exercise Equipement
-Contact
-Product Management
-My Profile
-Log out
-Register
-Edit product
+Home | Pass | Pass | | Pass
+All products | Pass | Pass | | Pass
+Nutrition Plans| Pass | Pass |  | Pass
+Contact| Pass | Pass | | Pass
+Product Management | Pass | Pass | | Pass
+My Profile | Pass | Pass | | Pass
+Log out | Pass | Pass | | Pass
+Log in | Pass | Pass | | Pass
+Register | Pass | Pass | | Pass
+Edit product | Pass | Pass | | Pass
 
 
 <br>
@@ -214,16 +214,16 @@ All Pages:
 
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Home
-All products
-Nutrition Plans
-Exercise Equipement
-Contact
-Product Management
-My Profile
-Log out
-Register
-Edit product
+Home| Pass | Pass | | Pass
+All products | Pass | Pass | | Pass
+Nutrition Plans | Pass | Pass | | Pass
+Exercise Equipement| Pass | Pass | | Pass
+Contact| Pass | Pass | | Pass
+Product Management| Pass | Pass | | Pass
+My Profile| Pass | Pass | | Pass
+Log out| Pass | Pass | | Pass
+Register| Pass | Pass | | Pass
+Edit product| Pass | Pass | | Pass
 
 <br>
 <br>
@@ -231,9 +231,9 @@ Edit product
 ## Home Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Browse all products link should direct to all products page. |
-Browse all nutrition books link should direct to all books page. |
-Browse all Exercise Equipment link should direct to all equipment page. |
+Browse all products link should direct to all products page. | Pass | Pass | | Pass
+Browse all nutrition books link should direct to all books page. | Initial fail. Forgot to add categories to url. Now a pass.| Pass | | Pass
+Browse all Exercise Equipment link should direct to all equipment page. | Initial fail. Forgot to add categories to url. Now a pass.| Pass | | Pass
 
 
 <br>
@@ -244,11 +244,11 @@ Browse all Exercise Equipment link should direct to all equipment page. |
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 All products in admin should show correctly. This includes all associated expected text such as name, price and category.
-If the super user is logged in an edit and delete product should be visible. Both the links should work
-If a super user is NOT logged in an edit and delete product should NOT be visible.
-Clicking on a catgory should filter all results for that category.
-Clicking on a picture should take the user to that product detail page.
-Each of the drop down links should filter or sort by whatever the user selects.
+If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
+If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
+Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
+Clicking on a picture should take the user to that product detail page. | Pass | Pass | | Pass
+Each of the drop down links should filter or sort by whatever the user selects. | Pass | Pass | | Pass
 
 
 <br>
@@ -258,11 +258,11 @@ Each of the drop down links should filter or sort by whatever the user selects.
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 All products in admin should show correctly. This includes all associated expected text such as name, price and category.
-If the super user is logged in an edit and delete product should be visible. Both the links should work
-If a super user is NOT logged in an edit and delete product should NOT be visible.
-Clicking on a catgory should filter all results for that category.
-Clicking on a picture should take the user to that product detail page.
-Each of the drop down links should filter or sort by whatever the user selects.
+If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
+If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
+Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
+Clicking on a picture should take the user to that product detail page.| Pass | Pass | | Pass
+Each of the drop down links should filter or sort by whatever the user selects.| Pass | Pass | | Pass
 
 <br>
 <br>
@@ -271,11 +271,11 @@ Each of the drop down links should filter or sort by whatever the user selects.
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 All products in admin should show correctly. This includes all associated expected text such as name, price and category.
-If the super user is logged in an edit and delete product should be visible. Both the links should work
-If a super user is NOT logged in an edit and delete product should NOT be visible.
-Clicking on a catgory should filter all results for that category.
-Clicking on a picture should take the user to that product detail page.
-Each of the drop down links should filter or sort by whatever the user selects.
+If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
+If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
+Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
+Clicking on a picture should take the user to that product detail page. | Pass | Pass | | Pass
+Each of the drop down links should filter or sort by whatever the user selects. | Pass | Pass | | Pass
 
 <br>
 <br>
@@ -283,8 +283,8 @@ Each of the drop down links should filter or sort by whatever the user selects.
 ## Contact
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The user should be able to fill out a form including name, email and message. 
-The form should not submit if any field is empty.
+The user should be able to fill out a form including name, email and message. | Pass | Pass | | Pass
+The form should not submit if any field is empty.| Pass | Pass | | Pass
 
 <br>
 <br>
@@ -293,14 +293,14 @@ The form should not submit if any field is empty.
 ## Product Details
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The page should load with; the image, the name, the price, the description and any reviews found in the database.
-If the super user is logged in an edit and delete product should be visible. Both the links should work
-If a super user is NOT logged in an edit and delete product should NOT be visible.
-The qauntity should not drop below zero
-The quantity buttons should adjust the total up and down
-The keep shopping button should take the user to the all products page
-The add to cart button should add the total quantity of items to the user cart.
-The user should be able to submit a review but NOT a blank review.
+The page should load with; the image, the name, the price, the description and any reviews found in the database.| In some cases the image didnt always load. Usually an issue with added products. Suspect it's a file type/size issue as some additional pictures work and some dont. | Pass | | Pass
+If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
+If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
+The qauntity should not drop below zero | Pass | Pass | | Pass
+The quantity buttons should adjust the total up and down | Pass | Pass | | Pass
+The keep shopping button should take the user to the all products page | Pass | Pass | | Pass
+The add to cart button should add the total quantity of items to the user cart.| Pass | Pass | | Pass
+The user should be able to submit a review but NOT a blank review.| Pass | Pass | | Pass
 
 
 <br>
@@ -309,15 +309,15 @@ The user should be able to submit a review but NOT a blank review.
 ## Shopping Cart
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-If the cart is empty a cart should display with a keep shopping button.
-The keep shopping button should take the user to the products page.
-The cart should display the product information and quantity that the users selected.
-If the price is over £50 the delivery should be free.
-The subtotal button should not drop below zero and the plus above 99 when the qty is updated.
-The Qty should update to the left.
-Delete item should remove all of that item from the cart. 
-The keep shopping button should take the user to the products page.
-The secure checkout button should take the user to the checkout page.
+If the cart is empty a cart should display with a keep shopping button. | Pass | Pass | | Pass
+The keep shopping button should take the user to the products page.| Pass | Pass | | Pass
+The cart should display the product information and quantity that the users selected.| Pass | Pass | | Pass
+If the price is over £50 the delivery should be free. | Pass | Pass | | Pass
+The subtotal button should not drop below zero and the plus above 99 when the qty is updated.| Pass | Pass | | Pass
+The Qty should update to the left. | Pass | Pass | | Pass
+Delete item should remove all of that item from the cart. | Pass | Pass | | Pass
+The keep shopping button should take the user to the products page.| Pass | Pass | | Pass
+The secure checkout button should take the user to the checkout page.| Pass | Pass | | Pass
 
 <br>
 <br>
@@ -325,10 +325,10 @@ The secure checkout button should take the user to the checkout page.
 ## Checkout
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The contents of the shopping cart should display as an order summary in the checkout page. 
-Each of the form fields should allow user input.
-The adjust cart button should take the user back to their cart.
-The complete order button should submit all of the details for payment and take the user to a checkout success page where the order information will be displayed. 
+The contents of the shopping cart should display as an order summary in the checkout page. | Pass | Pass | | Pass
+Each of the form fields should allow user input. | Pass | Pass | | Pass
+The adjust cart button should take the user back to their cart.| Pass | Pass | | Pass
+The complete order button should submit all of the details for payment and take the user to a checkout success page where the order information will be displayed. | Pass | Pass | | Pass
 
 
 <br>
@@ -337,9 +337,9 @@ The complete order button should submit all of the details for payment and take 
 ## Profile Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The profile page should display any order stored in the database for the current logged in user.
-The order number should take the user to their previously submitted order and have their details displayed.
-The User should be able to update their basic default delivery information and click the update information link.
+The profile page should display any order stored in the database for the current logged in user. | Pass | Pass | | Pass
+The order number should take the user to their previously submitted order and have their details displayed.| Pass | Pass | | Pass
+The User should be able to update their basic default delivery information and click the update information link.| Pass | Pass | | Pass
 
 <br>
 <br>
@@ -347,7 +347,7 @@ The User should be able to update their basic default delivery information and c
 ## Search bar
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The search bard should display any products with text associated with a database item in a product page.
+The search bard should display any products with text associated with a database item in a product page. | Pass | Pass | | Fail
 
 <br>
 <br>
@@ -355,11 +355,11 @@ The search bard should display any products with text associated with a database
 ## Product Management
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-This page should allow a SUPER USER ONLY access to add a product.
-The form should error if a price over 6 digits is added. 
-All of the categories should display from the database.
-A form with all data base items should be displayed for the user to add to the database.
-The user should be able to add an image.
+This page should allow a SUPER USER ONLY access to add a product. | Pass | Pass | | Pass
+The form should error if a price over 6 digits is added. | Pass | Pass | | Pass
+All of the categories should display from the database. | Pass | Pass | | Pass
+A form with all data base items should be displayed for the user to add to the database. | Pass | Pass | | Pass
+The user should be able to add an image. | Pass | Pass | | Pass
 
 <br>
 <br>
@@ -367,12 +367,12 @@ The user should be able to add an image.
 ## Edit Product
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-This page should allow a SUPER USER ONLY access to add a product.
-The form should display information about the item the user selected to edit.
-The form should error if a price over 6 digits is added. 
-All of the categories should display from the database.
-A form with all data base items should be displayed for the user to change in the database.
-The user should be able to add an image.
+This page should allow a SUPER USER ONLY access to add a product. | Pass | Pass | | Pass
+The form should display information about the item the user selected to edit. | Pass | Pass | | Pass
+The form should error if a price over 6 digits is added. | Pass | Pass | | Pass
+All of the categories should display from the database. | Pass | Pass | | Pass
+A form with all data base items should be displayed for the user to change in the database.| Pass | Pass | | Pass
+The user should be able to add an image. | Pass | Pass | | Pass
 
 <br>
 <br>
@@ -381,7 +381,7 @@ The user should be able to add an image.
 ## Register
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The user should be displayed with a page allowing them to register.
+The user should be displayed with a page allowing them to register. | Pass | Pass | | Pass
 
 <br>
 <br>
@@ -389,7 +389,7 @@ The user should be displayed with a page allowing them to register.
 ## Login Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The user should be displayed with a page allowing them to log in. 
+The user should be displayed with a page allowing them to log in. | Pass | Pass | | Pass
 
 <br>
 <br>
@@ -397,7 +397,7 @@ The user should be displayed with a page allowing them to log in.
 ## Logout Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The user should be displayed with a page allowing them to log out. 
+The user should be displayed with a page allowing them to log out. | Pass | Pass | | Pass
 
 <br>
 <br>
