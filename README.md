@@ -100,8 +100,34 @@ It is really important to include responsive design in this project as many user
 
 ## Sitemap
 
+![index web](static/assets/images/site_images/wireframes/site-map.jpg)
+
 
 ## Wireframes
+
+![index web](static/assets/images/site_images/wireframes/desk-home.jpg)
+
+![index web](static/assets/images/site_images/wireframes/desk-products.jpg)
+
+![index web](static/assets/images/site_images/wireframes/desk-product.jpg)
+
+![index web](static/assets/images/site_images/wireframes/desk-checkout.jpg)
+
+![index web](static/assets/images/site_images/wireframes/desk-order.jpg)
+
+![index web](static/assets/images/site_images/wireframes/desk-contact.jpg)
+
+![index web](static/assets/images/site_images/wireframes/mob-home.jpg)
+
+![index web](static/assets/images/site_images/wireframes/mob-products.jpg)
+
+![index web](static/assets/images/site_images/wireframes/mob-product.jpg)
+
+![index web](static/assets/images/site_images/wireframes/mob-checkout.jpg)
+
+![index web](static/assets/images/site_images/wireframes/mob-order.jpg)
+
+![index web](static/assets/images/site_images/wireframes/mob-contact.jpg)
 
 <a name="surface"></a>
 
