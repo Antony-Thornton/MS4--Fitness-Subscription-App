@@ -636,6 +636,7 @@ To prevent 500 errors during login on a deployed site you need to make a one lin
 ### Step 4 - Amazon Web Services
 
 Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20changes%20sheet.pdf
+
 33. Log into/create an account on aws.amazon.com
 34. Under services find s3 and create a bucket
 35. Name the bucket so it matches your project and select nearest region
