@@ -536,13 +536,17 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 # 4. Testing
 #### [Go To Top](#table-of-contents "Go To Top")
 
-In order to reduce content in this README full testing has been documented in a seperate README.
+In order to reduce content in this README full testing has been documented in a seperate <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">README</a>.
 
-The app has been tested on a desktop, Samsung s9+ and an ipad. If you notice any bugs/issues please feel free to contact me.
+Testing the application involved a few steps. 
 
-See <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">here</a> for full testing.
+The informal testing involved writing a line of code, loading the website and checking the result. If the desired result was achieved then the code would be pushed to git hub. If it failed, the code would be reviewed and changed. This method allowed me to ensure that the website was reacting as expected while it was being built.
 
-<br>
+Once the website was considered deployable a series of pre tests were conducted with the intention of reducing bugs during the implementation process. 
+
+Once the website was deployed and considered "finished" or ready for use. A series of manual checks was conducted that included targeted outcomes on desktop, Samsung s9+ and Ipad.
+
+That being said if you notice any bugs/issues please feel free to contact me.
 
 
 <a name="development-cycle"></a>
