@@ -337,7 +337,7 @@ The complete order button should submit all of the details for payment and take 
 | :--- | :--- | :--- | :--- | :---
 The profile page should display any order stored in the database for the current logged in user. | Pass | Pass |  Pass | Pass
 The order number should take the user to their previously submitted order and have their details displayed.| Pass | Pass |  Pass | Pass
-The User should be able to update their basic default delivery information and click the update information link.| Fail | Fail | Fail| Fail
+The User should be able to update their basic default delivery information and click the update information link.| Fail - Now passing | Fail - Now passing| Fail - Now passing| Fail - Now passing
 
 <br>
 <br>
