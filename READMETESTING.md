@@ -192,16 +192,16 @@ All Pages:
 
 | Page | Expected result | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Home | The link should navigate to the page noted | Pass | | Pass
-All products | The link should navigate to the page noted | Pass | | Pass
-Nutrition Plans| The link should navigate to the page noted | Pass |  | Pass
-Contact| The link should navigate to the page noted | Pass | | Pass
-Product Management | The link should navigate to the page noted | Pass | | Pass
-My Profile | The link should navigate to the page noted | Pass | | Pass
-Log out | The link should navigate to the page noted | Pass | | Pass
-Log in | The link should navigate to the page noted | Pass | | Pass
-Register | The link should navigate to the page noted | Pass | | Pass
-Edit product | The link should navigate to the page noted | Pass | | Pass
+Home | The link should navigate to the page noted | Pass | Pass | Pass
+All products | The link should navigate to the page noted | Pass |  Pass | Pass
+Nutrition Plans| The link should navigate to the page noted | Pass | Pass | Pass
+Contact| The link should navigate to the page noted | Pass |  Pass | Pass
+Product Management | The link should navigate to the page noted | Pass |  Pass | Pass
+My Profile | The link should navigate to the page noted | Pass |  Pass | Pass
+Log out | The link should navigate to the page noted | Pass |  Pass | Pass
+Log in | The link should navigate to the page noted | Pass |  Pass | Pass
+Register | The link should navigate to the page noted | Pass |  Pass | Pass
+Edit product | The link should navigate to the page noted | Pass |  Pass | Pass
 
 
 <br>
@@ -212,16 +212,16 @@ All Pages:
 
 | Page | Expected result | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Home| The 4 links should open to the specified site | Pass | | Pass
-All products | The 4 links should open to the specified site | Pass | | Pass
-Nutrition Plans | The 4 links should open to the specified site | Pass | | Pass
-Exercise Equipement| The 4 links should open to the specified site | Pass | | Pass
-Contact| The 4 links should open to the specified site | Pass | | Pass
-Product Management| The 4 links should open to the specified site | Pass | | Pass
-My Profile| The 4 links should open to the specified site | Pass | | Pass
-Log out| The 4 links should open to the specified site | Pass | | Pass
-Register| The 4 links should open to the specified site | Pass | | Pass
-Edit product| The 4 links should open to the specified site | Pass | | Pass
+Home| The 4 links should open to the specified site | Pass |  Pass | Pass
+All products | The 4 links should open to the specified site | Pass |  Pass | Pass
+Nutrition Plans | The 4 links should open to the specified site | Pass |  Pass | Pass
+Exercise Equipement| The 4 links should open to the specified site | Pass |  Pass | Pass
+Contact| The 4 links should open to the specified site | Pass |  Pass | Pass
+Product Management| The 4 links should open to the specified site | Pass |  Pass | Pass
+My Profile| The 4 links should open to the specified site | Pass |  Pass | Pass
+Log out| The 4 links should open to the specified site | Pass |  Pass | Pass
+Register| The 4 links should open to the specified site | Pass |  Pass | Pass
+Edit product| The 4 links should open to the specified site | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -229,9 +229,9 @@ Edit product| The 4 links should open to the specified site | Pass | | Pass
 ## Home Page
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Browse all products link should direct to all products page. | Pass | Pass | | Pass
-Browse all nutrition books link should direct to all books page. | Initial fail. Forgot to add categories to url. Now a pass.| Pass | | Pass
-Browse all Exercise Equipment link should direct to all equipment page. | Initial fail. Forgot to add categories to url. Now a pass.| Pass | | Pass
+Browse all products link should direct to all products page. | Pass | Pass |  Pass | Pass
+Browse all nutrition books link should direct to all books page. | Initial fail. Forgot to add categories to url. Now a pass.| Pass |  Pass | Pass
+Browse all Exercise Equipment link should direct to all equipment page. | Initial fail. Forgot to add categories to url. Now a pass.| Pass |  Pass | Pass
 
 
 <br>
@@ -241,12 +241,12 @@ Browse all Exercise Equipment link should direct to all equipment page. | Initia
 
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-All products in admin should show correctly. This includes all associated expected text such as name, price and category. | Pass | Pass | | Pass
-If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
-If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
-Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
-Clicking on a picture should take the user to that product detail page. | Pass | Pass | | Pass
-Each of the drop down links should filter or sort by whatever the user selects. | Pass | Pass | | Pass
+All products in admin should show correctly. This includes all associated expected text such as name, price and category. | Pass | Pass |  Pass | Pass
+If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass |  Pass | Pass
+If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass |  Pass | Pass
+Clicking on a catgory should filter all results for that category. | Pass | Pass |  Pass | Pass
+Clicking on a picture should take the user to that product detail page. | Pass | Pass |  Pass | Pass
+Each of the drop down links should filter or sort by whatever the user selects. | Pass | Pass |  Pass | Pass
 
 
 <br>
@@ -255,12 +255,12 @@ Each of the drop down links should filter or sort by whatever the user selects. 
 ## Nutrition Plans
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-All products in admin should show correctly. This includes all associated expected text such as name, price and category.| Pass | Pass | | Pass
-If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
-If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
-Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
-Clicking on a picture should take the user to that product detail page.| Pass | Pass | | Pass
-Each of the drop down links should filter or sort by whatever the user selects.| Pass | Pass | | Pass
+All products in admin should show correctly. This includes all associated expected text such as name, price and category.| Pass | Pass |  Pass | Pass
+If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass |  Pass | Pass
+If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass |  Pass | Pass
+Clicking on a catgory should filter all results for that category. | Pass | Pass |  Pass | Pass
+Clicking on a picture should take the user to that product detail page.| Pass | Pass |  Pass | Pass
+Each of the drop down links should filter or sort by whatever the user selects.| Pass | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -268,12 +268,12 @@ Each of the drop down links should filter or sort by whatever the user selects.|
 ## Exercise Plans
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-All products in admin should show correctly. This includes all associated expected text such as name, price and category.| Pass | Pass | | Pass
-If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
-If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
-Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
-Clicking on a picture should take the user to that product detail page. | Pass | Pass | | Pass
-Each of the drop down links should filter or sort by whatever the user selects. | Pass | Pass | | Pass
+All products in admin should show correctly. This includes all associated expected text such as name, price and category.| Pass | Pass |  Pass | Pass
+If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass |  Pass | Pass
+If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass |  Pass | Pass
+Clicking on a catgory should filter all results for that category. | Pass | Pass |  Pass | Pass
+Clicking on a picture should take the user to that product detail page. | Pass | Pass |  Pass | Pass
+Each of the drop down links should filter or sort by whatever the user selects. | Pass | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -281,8 +281,8 @@ Each of the drop down links should filter or sort by whatever the user selects. 
 ## Contact
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The user should be able to fill out a form including name, email and message. | Pass | Pass | | Pass
-The form should not submit if any field is empty.| Pass | Pass | | Pass
+The user should be able to fill out a form including name, email and message. | Pass | Pass |  Pass | Pass
+The form should not submit if any field is empty.| Pass | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -291,14 +291,14 @@ The form should not submit if any field is empty.| Pass | Pass | | Pass
 ## Product Details
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The page should load with; the image, the name, the price, the description and any reviews found in the database.| In some cases the image didnt always load. Usually an issue with added products. Suspect it's a file type/size issue as some additional pictures work and some dont. | Pass | | Pass
-If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
-If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
-The qauntity should not drop below zero | Pass | Pass | | Pass
-The quantity buttons should adjust the total up and down | Pass | Pass | | Pass
-The keep shopping button should take the user to the all products page | Pass | Pass | | Pass
-The add to cart button should add the total quantity of items to the user cart.| Pass | Pass | | Pass
-The user should be able to submit a review but NOT a blank review.| Pass | Pass | | Pass
+The page should load with; the image, the name, the price, the description and any reviews found in the database.| In some cases the image didnt always load. Usually an issue with added products. Suspect it's a file type/size issue as some additional pictures work and some dont. | Pass |  Pass | Pass
+If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass |  Pass | Pass
+If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass |  Pass | Pass
+The qauntity should not drop below zero | Pass | Pass |  Pass | Pass
+The quantity buttons should adjust the total up and down | Pass | Pass |  Pass | Pass
+The keep shopping button should take the user to the all products page | Pass | Pass |  Pass | Pass
+The add to cart button should add the total quantity of items to the user cart.| Pass | Pass |  Pass | Pass
+The user should be able to submit a review but NOT a blank review.| Pass | Pass |  Pass | Pass
 
 
 <br>
@@ -307,15 +307,15 @@ The user should be able to submit a review but NOT a blank review.| Pass | Pass 
 ## Shopping Cart
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-If the cart is empty a cart should display with a keep shopping button. | Pass | Pass | | Pass
-The keep shopping button should take the user to the products page.| Pass | Pass | | Pass
-The cart should display the product information and quantity that the users selected.| Pass | Pass | | Pass
-If the price is over £50 the delivery should be free. | Pass | Pass | | Pass
-The subtotal button should not drop below zero and the plus above 99 when the qty is updated.| Pass | Pass | | Pass
-The Qty should update to the left. | Pass | Pass | | Pass
-Delete item should remove all of that item from the cart. | Pass | Pass | | Pass
-The keep shopping button should take the user to the products page.| Pass | Pass | | Pass
-The secure checkout button should take the user to the checkout page.| Pass | Pass | | Pass
+If the cart is empty a cart should display with a keep shopping button. | Pass | Pass |  Pass | Pass
+The keep shopping button should take the user to the products page.| Pass | Pass |  Pass | Pass
+The cart should display the product information and quantity that the users selected.| Pass | Pass |  Pass | Pass
+If the price is over £50 the delivery should be free. | Pass | Pass |  Pass | Pass
+The subtotal button should not drop below zero and the plus above 99 when the qty is updated.| Pass | Pass |  Pass | Pass
+The Qty should update to the left. | Pass | Pass |  Pass | Pass
+Delete item should remove all of that item from the cart. | Pass | Pass |  Pass | Pass
+The keep shopping button should take the user to the products page.| Pass | Pass |  Pass | Pass
+The secure checkout button should take the user to the checkout page.| Pass | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -323,10 +323,10 @@ The secure checkout button should take the user to the checkout page.| Pass | Pa
 ## Checkout
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The contents of the shopping cart should display as an order summary in the checkout page. | Pass | Pass | | Pass
-Each of the form fields should allow user input. | Pass | Pass | | Pass
-The adjust cart button should take the user back to their cart.| Pass | Pass | | Pass
-The complete order button should submit all of the details for payment and take the user to a checkout success page where the order information will be displayed. | Pass | Pass | | Pass
+The contents of the shopping cart should display as an order summary in the checkout page. | Pass | Pass |  Pass | Pass
+Each of the form fields should allow user input. | Pass | Pass |  Pass | Pass
+The adjust cart button should take the user back to their cart.| Pass | Pass |  Pass | Pass
+The complete order button should submit all of the details for payment and take the user to a checkout success page where the order information will be displayed. | Pass | Pass |  Pass | Pass
 
 
 <br>
@@ -335,9 +335,9 @@ The complete order button should submit all of the details for payment and take 
 ## Profile Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The profile page should display any order stored in the database for the current logged in user. | Pass | Pass | | Pass
-The order number should take the user to their previously submitted order and have their details displayed.| Pass | Pass | | Pass
-The User should be able to update their basic default delivery information and click the update information link.| Pass | Pass | | Pass
+The profile page should display any order stored in the database for the current logged in user. | Pass | Pass |  Pass | Pass
+The order number should take the user to their previously submitted order and have their details displayed.| Pass | Pass |  Pass | Pass
+The User should be able to update their basic default delivery information and click the update information link.| Fail | Fail | Fail| Fail
 
 <br>
 <br>
@@ -345,7 +345,7 @@ The User should be able to update their basic default delivery information and c
 ## Search bar
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The search bard should display any products with text associated with a database item in a product page. | Pass | Pass | | Fail
+The search bard should display any products with text associated with a database item in a product page. | Pass | Pass | | Fail - Missing } - Now passing
 
 <br>
 <br>
@@ -353,11 +353,11 @@ The search bard should display any products with text associated with a database
 ## Product Management
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-This page should allow a SUPER USER ONLY access to add a product. | Pass | Pass | | Pass
-The form should error if a price over 6 digits is added. | Pass | Pass | | Pass
-All of the categories should display from the database. | Pass | Pass | | Pass
-A form with all data base items should be displayed for the user to add to the database. | Pass | Pass | | Pass
-The user should be able to add an image. | Pass | Pass | | Pass
+This page should allow a SUPER USER ONLY access to add a product. | Pass | Pass |  Pass | Pass
+The form should error if a price over 6 digits is added. | Pass | Pass |  Pass | Pass
+All of the categories should display from the database. | Pass | Pass |  Pass | Pass
+A form with all data base items should be displayed for the user to add to the database. | Pass | Pass |  Pass | Pass
+The user should be able to add an image. | Pass | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -365,12 +365,12 @@ The user should be able to add an image. | Pass | Pass | | Pass
 ## Edit Product
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-This page should allow a SUPER USER ONLY access to add a product. | Pass | Pass | | Pass
-The form should display information about the item the user selected to edit. | Pass | Pass | | Pass
-The form should error if a price over 6 digits is added. | Pass | Pass | | Pass
-All of the categories should display from the database. | Pass | Pass | | Pass
-A form with all data base items should be displayed for the user to change in the database.| Pass | Pass | | Pass
-The user should be able to add an image. | Pass | Pass | | Pass
+This page should allow a SUPER USER ONLY access to add a product. | Pass | Pass |  Pass | Pass
+The form should display information about the item the user selected to edit. | Pass | Pass |  Pass | Pass
+The form should error if a price over 6 digits is added. | Pass | Pass |  Pass | Pass
+All of the categories should display from the database. | Pass | Pass |  Pass | Pass
+A form with all data base items should be displayed for the user to change in the database.| Pass | Pass |  Pass | Pass
+The user should be able to add an image. | Pass | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -379,7 +379,7 @@ The user should be able to add an image. | Pass | Pass | | Pass
 ## Register
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The user should be displayed with a page allowing them to register. | Pass | Pass | | Pass
+The user should be displayed with a page allowing them to register. | Pass | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -387,7 +387,7 @@ The user should be displayed with a page allowing them to register. | Pass | Pas
 ## Login Page
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The user should be displayed with a page allowing them to log in. | Pass | Pass | | Pass
+The user should be displayed with a page allowing them to log in. | Pass | Pass |  Pass | Pass
 
 <br>
 <br>
@@ -395,7 +395,7 @@ The user should be displayed with a page allowing them to log in. | Pass | Pass 
 ## Logout Page
 | Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-The user should be displayed with a page allowing them to log out. | Pass | Pass | | Pass
+The user should be displayed with a page allowing them to log out. | Pass | Pass |  Pass | Pass
 
 <br>
 <br>
