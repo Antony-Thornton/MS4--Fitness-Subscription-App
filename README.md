@@ -33,16 +33,16 @@ A live website can be found <a href="https://the-veggie-guy-fitness.herokuapp.co
 #### [Go To Top](#table-of-contents "Go To Top")
 This project is designed to extend "The Veggie Guy" brand by offering a fitness solution alongside a cookbook solution seen <a href="https://cook-book-antony.herokuapp.com/" target="_blank">here</a>. 
 
-The website is primarily built with influence from code insititues mini project which utilises the bootstrap framework. Credit for the UX design is due for both parties. 
+The website is primarily built with influence from code institutes mini project which utilises the bootstrap framework. Credit for the UX design is due for both parties. 
 
 <a name="strategy"></a>
 
 ## 1.1 Strategy
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
 ## Project Goals
 The website should:
-* Promote a brand of fitness recipe's(In this case books) and other fitness related products
+* Promote a brand of fitness recipe’s (In this case books) and other fitness related products
 * Allow the user to create a profile
 * Allow the user to purchase fitness related products
 * Generate revenue for the site owner
@@ -69,19 +69,18 @@ The user should be able to add items to:
 * Get a visual and email confirmation of their purchase
 
 
-
 ### User Expectations:
 The system should have a simple user interface, with the navigation to each section clear and concise.
 
 * Each page is clear to read
 * The user interface is easy to navigate
 * The website is responsive on all devices
-* Thr user should be able to browse and purchase products.
+* The user should be able to browse and purchase products.
 
 <a name="structure"></a>
 
 ## 1.2 Structure
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
 It is really important to include responsive design in this project as many users are using different devices (mobile, tablet, laptop/PC). This gives the user the best experience on their device.
 
@@ -89,29 +88,26 @@ It is really important to include responsive design in this project as many user
 * Easy navigation through labelled buttons
 * All elements will be consistent including font size, font family, colour scheme.
 
-
 ## Data Schema
 
 Currently there are 4 main Categories. Within these categories there are products that fall into these categories. The user can then leave a review on specific products for display on the website.
 
-Currently the user contact messages are stand alone but in future these can be linked to specific products if needed. 
+Currently the user contact messages are standalone but in future these can be linked to specific products if needed. 
 
 ![index web](media/data-schema.jpg)
 
 
-
 ## Data Models
 
-Please see django <a name="skeleton" href="https://docs.djangoproject.com/en/4.0/topics/db/models/">documentation</a> for more information.
+Please see Django <a name="skeleton" href="https://docs.djangoproject.com/en/4.0/topics/db/models/">documentation</a> for more information.
 
 Definition:
-A model is the single, definitive source of information about your data. It contains the essential fields and behaviors of the data you’re storing. Generally, each model maps to a single database table.
+A model is the single, definitive source of information about your data. It contains the essential fields and behaviours of the data you’re storing. Generally, each model maps to a single database table.
 
 The basics:
 * Each model is a Python class that subclasses django.db.models.Model.
 * Each attribute of the model represents a database field.
 * With all of this, Django gives you an automatically-generated database-access API; see Making queries.
-
 
 Checkout Model Structure:
 
@@ -125,7 +121,6 @@ Checkout Model Structure:
 
     from products.models import Product
     from profiles.models import UserProfile
-
 
     class Order(models.Model):
         order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -182,7 +177,6 @@ Checkout Model Structure:
         def __str__(self):
             return self.order_number
 
-
     class OrderLineItem(models.Model):
         order = models.ForeignKey(
             Order, null=False, blank=False, on_delete=models.CASCADE,
@@ -210,10 +204,8 @@ Checkout Model Structure:
 
 Contact Form Model structures:
 
-
         from django.db import models
         from django.conf import settings
-
 
         class contact_message(models.Model):
 
@@ -224,7 +216,6 @@ Contact Form Model structures:
 All Products Model Structures:
 
         from django.db import models
-
 
         class Category(models.Model):
 
@@ -240,7 +231,6 @@ All Products Model Structures:
             def get_friendly_name(self):
                 return self.friendly_name
 
-
         class Product(models.Model):
             category = models.ForeignKey('Category', null=True, blank=True,
                                         on_delete=models.SET_NULL)
@@ -255,7 +245,6 @@ All Products Model Structures:
 
             def __str__(self):
                 return self.name
-
 
         class product_review(models.Model):
 
@@ -274,7 +263,6 @@ Profile Page Model Structures:
         from .forms import UserProfileForm
 
         from checkout.models import Order
-
 
         def profile(request):
             """ Display the user's profile. """
@@ -306,7 +294,6 @@ Profile Page Model Structures:
 
             return render(request, template, context)
 
-
         def order_history(request, order_number):
             order = get_object_or_404(Order, order_number=order_number)
 
@@ -324,18 +311,16 @@ Profile Page Model Structures:
             return render(request, template, context)
 
 
-
 <br>
 
 <a name="skeleton"></a>
 
 ## 1.3 Skeleton
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
 ## Sitemap
 
 ![index web](static/assets/images/site_images/wireframes/site-map.jpg)
-
 
 ## Wireframes
 
@@ -366,19 +351,19 @@ Profile Page Model Structures:
 <a name="surface"></a>
 
 ## 1.4 Surface
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
 ### Font and colours:
 Colours used can be found <a href="https://getbootstrap.com/docs/5.0/utilities/colors/" target="_blank">here</a>.
 
 Fonts used have been pulled through using Bootstrap 5.
 
-In order to stay consistent with the Veggie Guy brand I have chosen a Green theme. The green is slightly different to the cookbook website due to materialisecss and bootstrap differences but I am happy as this allows the user to differentiate which site they are looking at.
+In order to stay consistent with the Veggie Guy brand I have chosen a green theme. The green is slightly different to the cookbook website due to materialisecss and bootstrap differences but I am happy as this allows the user to differentiate which site they are looking at.
 
 <a name="features"></a>
 
 # 2. Features
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
 ## Navigation
 
@@ -386,13 +371,13 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
     * One view for a desktop and the other for a mobile/tablet
 * The desktop view uses a traditional layout utilising bootstrap CSS
     * The user should clearly find all navigational pages at the top of the page
-* As with the desktop view the mobile utalizes existing CSS code but compresses the links into a collapsible element at the top of the header
+* As with the desktop view the mobile utilizes existing CSS code but compresses the links into a collapsible element at the top of the header
     * The user should be able to open the element and see all the available links
 * Additional navigation functionality will allow registered users or super users access to additional information through a "My Account" navigation drop down:
     * Product management (Super)
     * My profile (All)
     * Login
-    * Signout (If loged in)
+    * Sign-out (If logged in)
 * Cart functionality will be added so the user can see what products they have added to their cart
 * The header will have links to:
     * Home page
@@ -410,13 +395,13 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 * The page directs the user to products that the user may find interesting based on 3 categories
     * All products
     * Nutrition plans/books
-    * Exercise equipement
+    * Exercise equipment
 
 ## Products Pages
-* There will be a page for all products, books, exercise equipement
+* There will be a page for all products, books, exercise equipment
     * The functionality/templates for each of these pages is the same apart from the data pulled in the background
 * This page will:
-    * Show all the products from both catergories in one page with the user able to click on the product for more information
+    * Show all the products from both categories in one page with the user able to click on the product for more information
     * Super users will be able to edit/delete products on this page also
     * Users will be able to sort the products using a drop down at the top right
     * The image stands as the main link to the product details page detailed below
@@ -428,7 +413,7 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
     * Product Price
     * Product Description
     * Product Reviews
-* Regular User functionailty:
+* Regular User functionality:
     * Change quantity of product
     * Add the specified quantity to the cart
     * Leave a review
@@ -446,22 +431,21 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 
 ## Shopping Cart Page
 * The shopping cart details all of the products added to the page by the user
-    * If none have been submited an empty cart will be displayed with a keep shopping button
+    * If none have been submitted an empty cart will be displayed with a keep shopping button
 * The user will be able to:
-    * Update quanitity of products they have added down to 1 only
+    * Update quantity of products they have added down to 1 only
     * Delete items they have added
     * See the price and quantity of the items selected as well as the grand total and delivery fee (10%)
     * The user can then either keep shopping with a button or head to secure checkout detailed below
 
-
 ## Checkout Page
-* The checkout page is deseigned to display a small order summary of the items the user wants to purchase
-* The page should display a form for the user to complete with compulsary fields
+* The checkout page is designed to display a small order summary of the items the user wants to purchase
+* The page should display a form for the user to complete with compulsory fields
 * The user should be able to adjust the cart (directing them back to the cart)
 * Once payment/delivery info is added the user should be able to complete order
 * The page should then submit information to the admin database
 * The user should be able to save their information or login/create a profile
-    * If a profile is authenticated the order should be stored under that user's account for later refferal
+    * If a profile is authenticated the order should be stored under that user's account for later referral
 * Once submitted the page will then display a checkout success page below
 
 ## Checkout Success Page
@@ -469,12 +453,11 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
     * Order Information - Date, time and order number
     * Order Summary - Summary of the checkout/cart pages
     * Delivery information - Name, address etc
-    * Billing informtaion - Order total, fee and grand total
+    * Billing information - Order total, fee and grand total
 
 ## Profile Page
 * The profile page should summarise the stored delivery information of the user with the ability to update the information
 * The users order history should be available and the order number should take them to a replica of the checkout success page for that specific order
-
 
 ## Product Management Page
 * The product management page allows super users to add a new product only
@@ -489,11 +472,10 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
     * Select Image from desktop folders
 
 
-
 ## Features left to implement
-* Load the cookbook website into this site - Ideally the cookbook and the fitness app will be on the same site so the user profile can accomodate both and it becomes a community hub.
+* Load the cookbook website into this site - Ideally the cookbook and the fitness app will be on the same site so the user profile can accommodate both and it becomes a community hub.
 * Star Rating system
-* Email functionailty partially set up. If time permits finish this off
+* Email functionality partially set up. If time permits finish this off
 * User contact submission. Allow a super user to:
     * See all contact form messages
     * Reply to all messages
@@ -507,14 +489,13 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
     * See contact form information
     * Reply with an email to contact form information
     * Add notes to contact form information
-* Loading javascript between checkout and checkout success
+* Loading JavaScript between checkout and checkout success
 * Add and link the contact messages to products if the user would like to add something in particular
-
 
 <a name="technologies-used"></a>
 
 # 3. Technologies Used
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
 * <a href="https://html.com/html5/" target="_blank">HTML 5</a>  
     * The project uses Hypertext Markup Language
@@ -548,9 +529,9 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
 <a name="testing"></a>
 
 # 4. Testing
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
-In order to reduce content in this README full testing has been documented in a seperate <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">README</a>.
+In order to reduce content in this README full testing has been documented in a separate <a href="https://github.com/Antony-Thornton/MS4--Fitness-Subscription-App/blob/main/READMETESTING.md" target="_blank">README</a>.
 
 Testing the application involved a few steps. 
 
@@ -558,54 +539,49 @@ The informal testing involved writing a line of code, loading the website and ch
 
 Once the website was considered deployable a series of pre tests were conducted with the intention of reducing bugs during the implementation process. 
 
-Once the website was deployed and considered "finished" or ready for use. A series of manual checks was conducted that included targeted outcomes on desktop, Samsung s9+ and Ipad.
+Once the website was deployed and considered "finished" or ready for use. A series of manual checks was conducted that included targeted outcomes on desktop, Samsung s9+ and iPad.
 
 That being said if you notice any bugs/issues please feel free to contact me.
-
 
 <a name="development-cycle"></a>
 
 # 5. Development Cycle
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
-A Code Insititute template can be found <a href="https://github.com/Code-Institute-Org/gitpod-full-template" target="_blank">here</a>.
+A Code Institute template can be found <a href="https://github.com/Code-Institute-Org/gitpod-full-template" target="_blank">here</a>.
 
 ### Setting up a new repository. 
 1. Go to the link above and click use this template
 2. Name it as required and select include all branches
 3. Click create new repository
-4. Click on the green gitpod button
-5. Navigate to <a href="https://gitpod.io/workspaces">gitpod workspaces</a> and pin the workspace
+4. Click on the green Gitpod button
+5. Navigate to <a href="https://gitpod.io/workspaces">Gitpod workspaces</a> and pin the workspace
 6. Use this link to continue working in that environment
-
 
 ### Install Django
 
-Note: I had an issue with versions of django (installed 4 but should have been 3.22) see below for details.
+Note: I had an issue with versions of Django (installed 4 but should have been 3.22) see below for details.
  ![index web](static/assets/images/development_cycle/django_admin_login_error_fix.jpg)
 1. In the terminal type in "pip3 install Django" May need to specify version here.
-2. Once installed type in "django-admin startproject fitness_subscription_app ."
+2. Once installed type in "Django-admin startproject fitness_subscription_app ."
     * change "fitness_subscription_app" to whatever you want to call it
     * This will create all your python files
-
 
 ### .gitignore file
 1. Add *.sqlite3
 2. Add *.pyc
 3. Add __pycache__
 
-### Test the django environment
+### Test the Django environment
 1. In the terminal type "python3 manage.py runserver"
     * You may need to expose port 8000
-    * You should see a message as per below if successfull
+    * You should see a message as per below if successful
 
 ![index web](static/assets/images/development_cycle/django_success.jpg)
 
-
 ### Python Migrations
 1. Type into the terminal "python3 manage.py migrate"
-    * I believe this migrates your files to the django website
-
+    * I believe this migrates your files to the Django website
 
 ### Create a superuser
 1. Type into the terminal "python3 manage.py createsuperuser"
@@ -631,49 +607,48 @@ See <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" 
     'allauth.socialaccount',
 5. Underneath "AUTHENTICATION_BACKENDS" in your settings.py file add "SITE_ID = 1"
 6. Add "path('accounts', include('allauth.urls'))," to your urls.py file
-7. Add , include to this line "from django.urls import path" in the url.py file as shown "from django.urls import path, include"
+7. Add, include to this line "from django.urls import path" in the url.py file as shown "from django.urls import path, include"
 
 ### Python Migrations
 1. Type into the terminal "python3 manage.py migrate"
-    * I believe this migrates your files to the django website
+    * I believe this migrates your files to the Django website
 
-### Test the django environment
+### Test the Django environment
 1. In the terminal type "python3 manage.py runserver"
     * You may need to expose port 8000
     * You should see a page not found message
 2. In the navigation bar add /admin at the end and log using superuser details
     * I came across an error when logging in
-<a name="django-admin"></a>
+<a name="Django-admin"></a>
 ![index web](static/assets/images/development_cycle/django_admin_login_error.jpg)
     * To fix this issue
 
         ![index web](static/assets/images/development_cycle/django_admin_login_error_fix.jpg)
 
 3. Change domain Name in the sites section of the admin page (I had a bug here. See known bugs section for details on fix)
-    * I went with "fsa.example.com" and "Fitness Subsription App" for this project
+    * I went with "fsa.example.com" and "Fitness Subscription App" for this project
 4. Log out and quit server
-
 
 ### Install Django Allauth Part 2
 1. In urls.py file add / to the end of the path('accounts/') line
 2. in settings.py add " EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' " under "SITE_ID"
 3. In admin go to emails
 4. Add new email (top right)
-5. Select Super user Email with serch Icon and update with verified and primary ticked
-6. LOGOUT of admin - I didnt do this so thought it wasnt working
-7. Go to the url path for the 8000 port like normal then add "/accounts/login" at the end
-    * this should take you to a log in page
+5. Select Super user Email with search Icon and update with verified and primary ticked
+6. LOGOUT of admin - I didn’t do this so thought it wasn’t working
+7. Go to the URL path for the 8000 port like normal then add "/accounts/login" at the end
+    * This should take you to a log in page
 8. Log in with the details of the user you created
     * If it worked it should redirect to a page with "/success" at the end
 9. In the terminal type in "pip3 freeze > requirements.txt"
 10. In the terminal type mkfir templates and then mkdir templates/allauth
-11. Commit changes to github
+11. Commit changes to GitHub
 
 ### Creating html templates
 1. In the terminal type "cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates/allauth/"
     * To check python version type "python --version" in the terminal as it has to match
     * -r means copy everything
-2. Delete any templates you dont plan to change
+2. Delete any templates you don’t plan to change
     * For this I deleted; "OpenID" and "tests"
 3. Add a base.html file under the "/templates/allauth" folder path
 4. In the base.html file you can either create your own or copy in a template
@@ -690,7 +665,7 @@ In the terminal you need to create the app for the page
 1. Type "python3 manage.py startapp home" into the terminal
 2. Type "mkdir -p home/templates/home"
     * p = parent
-3. Richt click on the new template and click new file called "index.html" or "x"
+3. Right click on the new template and click new file called "index.html" or "x"
 4. In the template add in the extends base.html python code for example
 
         {% extends "base.html" %}
@@ -727,20 +702,18 @@ In the terminal you need to create the app for the page
             os.path.join(BASE_DIR, 'templates', 'allauth'),
 
 10. Save changes and test its working by loading a new server
-    * When I first did this I had a few files out of place so was getting "ModuleNotFoundError: No module named 'home/'" error
-
+    * When I first did this, I had a few files out of place so was getting "ModuleNotFoundError: No module named 'home/'" error
 
 
 <a name="deployment"></a>
 
 # 6. Deployment
-#### [Go To Top](#table-of-contents "Go To Top")
-
+#### [Go To Top](#table-of-contents "Go to Top")
 
 Deployment Notes from course:
 
 If you get the error below during the steps to deployment:
-* django.db.utils.OperationalError: FATAL: role "somerandomletters" does not exist
+* Django.db.utils.OperationalError: FATAL: role "somerandomletters" does not exist
 
 Please run the following command in the terminal to fix it:
 unset PGHOSTADDR
@@ -749,14 +722,13 @@ A note for creating your database if you didn't use fixtures
 When you come to follow this process for your milestone project, you may not have used a fixtures file to populate your database like the instructor did.
 If this is the case, manually re-creating your database when you come to deploy can take a considerable amount of time. Thankfully, there is a short process you can follow to download your local mysql database and then upload it to postgres:
 1. Make sure your manage.py file is connected to your sqlite3 database
-2. Use this command to backup your current database and load it into a db.json file:
+2. Use this command to back up your current database and load it into a db.json file:
 ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
 3. Connect your manage.py file to your postgres database
 4. Then use this command to load your data from the db.json file into postgres:
 ./manage.py loaddata db.json
 If you would like more information on this process along with a few handy tips, have a look at this DevTip on Slack.
 Video
-
 
 
 ### Step 1 - Create a Heroku App
@@ -780,7 +752,7 @@ Video
         DATABASES = {
             'default': dj_databas_url.parse('''''ADD URL HERE''''' See below)
         }
-10. Get the url from heroku in the settings tab then Config Vars
+10. Get the url from Heroku in the settings tab then Config Vars
 11. Run migrations (python3 manage.py showmigrations)
 12. Import all product data by running (data in your admin tab) you may need to follow the steps below these lines. I did for this project.:
     * python3 manage.py loaddata categories' In this case
@@ -806,8 +778,7 @@ If this is the case, manually re-creating your database when you come to deploy 
 14. Comment out step 9 and un comment step 8
 15. Git push changes
 
-
-To prevent 500 errors during login on a deployed site you need to make a one line addition to your settings file.
+To prevent 500 errors during login on a deployed site you need to make a one-line addition to your settings file.
 
     ACCOUNT_EMAIL_VERIFICATION = 'none'
 
@@ -830,43 +801,43 @@ To prevent 500 errors during login on a deployed site you need to make a one lin
 18. Create a Procfile in the main area (same as readme) and put
 
         web:gunicorn fitness_subscription_app.wgsi:application
-19. In the terminal write heroku login which should spawn a login message. Look for any instructions in the terminal
-    * You may get an error like I did where the popup didnt load. Follow these <a href="https://stackoverflow.com/questions/63363085/ip-address-mismatch-on-signing-into-heroku-cli" target="_blank">steps</a>
+19. In the terminal write Heroku login which should spawn a login message. Look for any instructions in the terminal
+    * You may get an error like I did where the popup didn’t load. Follow these <a href="https://stackoverflow.com/questions/63363085/ip-address-mismatch-on-signing-into-heroku-cli" target="_blank">steps</a>
         1. Navigate to https://dashboard.heroku.com/account/applications
         2. In Authorizations click on create authorization button
-        3. Add description in pop up eg.heroku cli and leave expire after blank if you dont want it to expire
+        3. Add description in pop up eg.heroku cli and leave expire after blank if you don’t want it to expire
         4. You will get authorization token
-        5. in cli run heroku login -i
-        6. when it prompts for password enter the authoriation token
+        5. in cli run Heroku login -i
+        6. when it prompts for password enter the authorisation token
 20. Login if needed
-21. Disable static files being loaded so that Heroku doesnt try when the app is deployed
+21. Disable static files being loaded so that Heroku doesn’t try when the app is deployed
     
-        heroku config:set DISABLE_COLLECTSTATIC=1
+        Heroku config:set DISABLE_COLLECTSTATIC=1
 22. You may get an error message about a missing flag in the terminal. Run the same line as above but with --app and the app name at the end
-        heroku config:set DISABLE_COLLECTSTATIC=1 --app fitness_subscription_app
+        Heroku config:set DISABLE_COLLECTSTATIC=1 --app fitness_subscription_app
 23. Add host names to allowed hosts in settings.py
 
-        ALLOWED_HOSTS = ['Heroku app path', 'localhost'] (local for gitpod server)
+        ALLOWED_HOSTS = ['Heroku app path', 'localhost'] (local for Gitpod server)
 24. Add and commit changes with push
-25. Push to heroku using
-    * git push heroku main  - Worked for me instead of master see <a href="https://stackoverflow.com/questions/63363085/ip-address-mismatch-on-signing-into-heroku-cli" target="_blank">for</a>
-        git push heroku master
+25. Push to Heroku using
+    * Git push Heroku main  - Worked for me instead of master see <a href="https://stackoverflow.com/questions/63363085/ip-address-mismatch-on-signing-into-heroku-cli" target="_blank">for</a>
+        git push Heroku master
     * You may also need to add a runtime.txt file and put your python version number in there. python --version & 
-    * You may need to initialize your herokuy git remote if you created your app on the website rather than with the CLI and pu
+    * You may need to initialize your Heroku git remote if you created your app on the website rather than with the CLI and put
 
-        heroku git:remote -a 'Heroku app name'
+        Heroku git:remote -a 'Heroku app name'
 
     Then
 
-        git push heroku master
+        git push Heroku master
 
-26. A url should appear in the teminal which will load your page without the static files (css etc)
+26. A url should appear in the terminal which will load your page without the static files (CSS etc)
 27. In Heroku site:
     * Go to the deploy page
-    * Connect to github and add repository name you want to connect to and then click connect.
+    * Connect to GitHub and add repository name you want to connect to and then click connect.
     * Enable automatic deploys on the same page
 28. Get a secret key from an online secret key generator
-29. In heroku on the settings page add it to config vars as 'SECRET_KEY'
+29. In Heroku on the settings page add it to config vars as 'SECRET_KEY'
 30. In settings.py replace the secret key above DEBUG with
 
         SECRET_KEY = os.environ.get('SECRET_KEY', '')
@@ -888,10 +859,10 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 38. click on the bucket and go to properties tab
 39. turn on static website hosting
 40. Update index document with "index.html"
-41. Erro document with "error.html"
+41. Error document with "error.html"
 42. Save
 43. Go to permissions tab
-44. In the Cross-origin resource sharing (CORS) add in the configiration below. This allows the website to communicate with S3
+44. In the Cross-origin resource sharing (CORS) add in the configuration below. This allows the website to communicate with S3
         CORS configuration
 
         Important
@@ -933,8 +904,8 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 47. In the services and or search bar look for IAM resources 
 48. Create a group by clicking "User Groups" on the left 
     * Name the group
-    * Click Create Group as we dont have policies to attach
-49. Click  policies on the left
+    * Click Create Group as we don’t have policies to attach
+49. Click policies on the left
     * Create Policy
     * JSON tab
     * Import Manage Policy
@@ -947,22 +918,22 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
                 "arn:aws:s3:::the-veggie-guy-fitness/*"
             ]
     * Click next and review policy
-    * Add a name (app name from heroku with -policy at the end) and description
+    * Add a name (app name from Heroku with -policy at the end) and description
     * Click create policy
 50. Go to groups and click on the earlier created group. 
 51. Follow steps from the link noted at the start of step 4
-52. Creat a user from the users page
+52. Create a user from the user’s page
     * Click add users
-    * Name it e.g. tvgf-user
+    * Name it e.g., tvgf-user
     * Give them programmatic access
     * Click next
     * Put the user in the group
     * Click through all the next buttons
     * Download and SAVE THE CSV SOMEWHERE SECURE AS THIS CANNOT BE DONE AGAIN
 
-### Step 5 - In Gitpod (connect django to s3)
+### Step 5 - In Gitpod (connect Django to s3)
 
-53. Install "pip3 install boto3" and "pip3 install django-storages"
+53. Install "pip3 install boto3" and "pip3 install Django-storages"
 54. "pip3 freeze > requirements.txt"
 55. In settings.py add storages under INSTALLED_APPS =
 56. Under static files comment in settings.py add
@@ -983,10 +954,8 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
         from django.conf import settings
         from storages.backends.s3boto3 import S3Boto3Storage
 
-
         class StaticStorage(S3Boto3Storage):
             location = settings.STATICFILES_LOCATION
-
 
         class MediaStorage(S3Boto3Storage):
             location = settings.MEDIAFILES_LOCATION
@@ -1008,7 +977,6 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 ### Step 6 - Media files in AWS S3
 61. Add cache control under the IF statement and push changes
 
-
         # Cache control
         AWS_S3_OBJECT_PARAMETERS = {
             'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
@@ -1025,8 +993,8 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 ### Step 7 - Stripe Keys
 67. Log into your stripe account
 68. Go to developers and click API Keys
-69. Get the pushable key
-70. Go to your config vars in settings on heroku
+69. Get the push able key
+70. Go to your config vars in settings on Heroku
 71. Add it in as STRIPE_PUBLIC_KEY
 72. Do the same for the STRIPE_SECRET_KEY
 73. Go to webhooks and clicking add endpoint
@@ -1034,7 +1002,7 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
     * Click receive all events
 
             https://the-veggie-guy-fitness.herokuapp.com/checkout/wh/
-74. Get the siginng secret and add it to heroku config vars
+74. Get the sign in secret and add it to Heroku config vars
     * STRIPE_WH_SECRET
 
 <br>
@@ -1042,7 +1010,7 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 <a name="end-product"></a>
 
 # 7. End Product
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
 ![index web](static/assets/images/site_images/final_site/home_final.jpg)
 
@@ -1052,67 +1020,59 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 
 <br>
 
-
 ![index web](static/assets/images/site_images/final_site/books_final.jpg)
 
 <br>
-
 
 ![index web](static/assets/images/site_images/final_site/equipment_final.jpg)
 
 <br>
 
-
 ![index web](static/assets/images/site_images/final_site/product_final.jpg)
 
 <br>
-
 
 ![index web](static/assets/images/site_images/final_site/cart_final.jpg)
 
 <br>
 
-
 ![index web](static/assets/images/site_images/final_site/checkout_final.jpg)
 
 <br>
 
-
 ![index web](static/assets/images/site_images/final_site/order_summary_final.jpg)
 
 <br>
-
 
 ![index web](static/assets/images/site_images/final_site/contact_final.jpg)
 
 <a name="known-bugs"></a>
 
 # 8. Known Bugs
-#### [Go To Top](#table-of-contents "Go To Top")
-
+#### [Go To Top](#table-of-contents "Go to Top")
 
 * Issue with Django versions causing log in issues for admin. See development cycle section
 * Issue where I was getting an error with clicking on site link
-    * I had to use this <a href="https://stackoverflow.com/questions/34548768/django-no-such-table-exception" target="_blank">link</a> to unmigrate py files then megrate again
+    * I had to use this <a href="https://stackoverflow.com/questions/34548768/django-no-such-table-exception" target="_blank">link</a> to unmigrated py files then migrate again
     * Also had to create a new superuser afterwards
-* Card payment element on the checkout page wasnt displaying. 
+* Card payment element on the checkout page wasn’t displaying. 
     * Fixed by unticking cache
     1. While the devtools is open (which it should be during development), the cache will be disabled.
-    2. When devtools is closed, the cache will return to it's normal behaviour.
+    2. When devtools is closed, the cache will return to its normal behaviour.
     3. Open your browser's developer tools
     4. Navigate to the "Network" tab
     5. Check the "Disable Cache" checkbox
     6. Reload your page as normal. (With devtools still open)
-* I accidently submitted to the admin panel early. It ended up having phone_number with blanke entries
-    * In order to fix i needed to migrate changes and replace the blank with 1. 
+* I accidently submitted to the admin panel early. It ended up having phone_number with blank entries
+    * In order to fix I needed to migrate changes and replace the blank with 1. 
     * I then migrated the changes with this
     * This allowed me to go into the admin (which was erroring before)
-* When trying to get the write review function to work i added a star function and migrated the changes to the database then reverted back. This caused an issue with my urls not working. I initially thought I had killed my project because nothing had changed except reversing the migrations
+* When trying to get the write review function to work I added a star function and migrated the changes to the database then reverted back. This caused an issue with my urls not working. I initially thought I had killed my project because nothing had changed except reversing the migrations
     * I made a branch of a previously working commit and installed the python libraries
     * I then tried to use the site but was getting a CSRF error message.
-    * I treid fixing this by clearing the cache and accidently tabbed back into the main branch which was now working
+    * I tried fixing this by clearing the cache and accidently tabbed back into the main branch which was now working
     * Not sure if this was the actual fix or not at this point
-* Error after deployment with submitting checkout form. The code would error because it couldnt authenticate a user. It just so happened that I was testing WHILE logged in and forgot to test when not logged in.
+* Error after deployment with submitting checkout form. The code would error because it couldn’t authenticate a user. It just so happened that I was testing WHILE logged in and forgot to test when not logged in.
 
         if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -1120,10 +1080,9 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
         order.user_profile = profile
         order.save()
 
-
 ### Bugs to be fixed
 * "GET /static/profiles/js/countryfield.js HTTP/1.1" 404 1709
-    * Javascript added to postload
+    * JavaScript added to post load
 * "GET /favicon.ico HTTP/1.1" 404 2839
 * Emails not sending in terminal
 * Webhooks not succeeding every time in stripe
@@ -1135,15 +1094,14 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 
 # 9. Credits
 
-#### [Go To Top](#table-of-contents "Go To Top")
+#### [Go To Top](#table-of-contents "Go to Top")
 
 ## Code
 
-* Code institure for design inspiration
+* Code institute for design inspiration
 * Stripe for stripe element styling and functionality
 * Bootstrap for CSS styling and structure
 * Django for the framework
-
 
 ## Content
 
@@ -1151,12 +1109,11 @@ Link for steps 34 on - https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20ch
 * For some of the diet plans/books I used images found online. Initially I had the links added but during deployment I lost this information.
 * Contact form Email - https://www.youtube.com/c/Codemycom
 
-
 ## Project Acknowledgements
 
-
-* Code Institute - For all course material and on going support
+* Code Institute - For all course material and ongoing support
 
 * Code Institute Tutor Support - For directing me to the correct solutions for any bugs and problems with my project.
 
 * My Mentor Marcel - For his constructive criticism and always pushing me to go further to develop my skills.
+
