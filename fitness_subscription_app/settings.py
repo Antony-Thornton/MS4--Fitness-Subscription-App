@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ  # False on deployment
 # DEBUG = True
 
-ALLOWED_HOSTS = ['the-veggie-guy-fitness.herokuapp.com', '127.0.0.1', 'localhost']  
+ALLOWED_HOSTS = ['the-veggie-guy-fitness.herokuapp.com', '127.0.0.1', 'localhost']  # noqa: E501
 # Covered in deployment videos
 
 
@@ -208,7 +208,6 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
     
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
