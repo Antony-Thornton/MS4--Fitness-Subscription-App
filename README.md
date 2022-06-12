@@ -89,6 +89,230 @@ It is really important to include responsive design in this project as many user
 * Easy navigation through labelled buttons
 * All elements will be consistent including font size, font family, colour scheme.
 
+
+## Data Schema
+
+Currently there are 4 main Categories. Within these categories there are products that fall into these categories. The user can then leave a review on specific products for display on the website.
+
+Currently the user contact messages are stand alone but in future these can be linked to specific products if needed. 
+
+![index web](media/data-schema.jpg)
+
+
+
+## Data Models
+
+Please see django <a name="skeleton" href="https://docs.djangoproject.com/en/4.0/topics/db/models/">documentation</a> for more information.
+
+Definition:
+A model is the single, definitive source of information about your data. It contains the essential fields and behaviors of the data you’re storing. Generally, each model maps to a single database table.
+
+The basics:
+* Each model is a Python class that subclasses django.db.models.Model.
+* Each attribute of the model represents a database field.
+* With all of this, Django gives you an automatically-generated database-access API; see Making queries.
+
+
+Checkout Model Structure:
+
+    import uuid
+
+    from django.db import models
+    from django.db.models import Sum
+    from django.conf import settings
+
+    from django_countries.fields import CountryField
+
+    from products.models import Product
+    from profiles.models import UserProfile
+
+
+    class Order(models.Model):
+        order_number = models.CharField(max_length=32, null=False, editable=False)
+        user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                        null=True, blank=True,
+                                        related_name='orders')
+        full_name = models.CharField(max_length=50, null=False, blank=False)
+        email = models.EmailField(max_length=254, null=False, blank=False)
+        phone_number = models.CharField(max_length=20, null=False, blank=False)
+        country = CountryField(blank_label='Country *', null=False, blank=False)
+        postcode = models.CharField(max_length=20, null=True, blank=True)
+        town_or_city = models.CharField(max_length=40, null=False, blank=False)
+        street_address1 = models.CharField(max_length=80, null=False, blank=False)
+        street_address2 = models.CharField(max_length=80, null=True, blank=True)
+        county = models.CharField(max_length=80, null=True, blank=True)
+        date = models.DateTimeField(auto_now_add=True)
+        delivery_cost = models.DecimalField(
+            max_digits=6, decimal_places=2, null=False, default=0)
+        order_total = models.DecimalField(
+            max_digits=10, decimal_places=2, null=False, default=0)
+        grand_total = models.DecimalField(
+            max_digits=10, decimal_places=2, null=False, default=0)
+
+        def _generate_order_number(self):
+            """
+            Generate a random, unique order number using UUID
+            """
+            return uuid.uuid4().hex.upper()
+
+        def update_total(self):
+            """
+            Update grand total each time a line item is added,
+            accounting for delivery costs.
+            """
+            self.order_total = self.lineitems.aggregate(
+                Sum('lineitem_total'))['lineitem_total__sum'] or 0
+            if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+                self.delivery_cost = self.order_total * \
+                    settings.STANDARD_DELIVERY_PERCENTAGE / 100
+            else:
+                self.delivery_cost = 0
+            self.grand_total = self.order_total + self.delivery_cost
+            self.save()
+
+        def save(self, *args, **kwargs):
+            """
+            Override the original save method to set the order number
+            if it hasn't been set already.
+            """
+            if not self.order_number:
+                self.order_number = self._generate_order_number()
+            super().save(*args, **kwargs)
+
+        def __str__(self):
+            return self.order_number
+
+
+    class OrderLineItem(models.Model):
+        order = models.ForeignKey(
+            Order, null=False, blank=False, on_delete=models.CASCADE,
+            related_name='lineitems')
+        product = models.ForeignKey(
+            Product, null=False, blank=False, on_delete=models.CASCADE)
+        product_size = models.CharField(
+            max_length=2, null=True, blank=True)  # XS, S, M, L, XL
+        quantity = models.IntegerField(
+            null=False, blank=False, default=0)
+        lineitem_total = models.DecimalField(
+            max_digits=6, decimal_places=2,
+            null=False, blank=False, editable=False)
+
+        def save(self, *args, **kwargs):
+            """
+            Override the original save method to set the lineitem total
+            and update the order total.
+            """
+            self.lineitem_total = self.product.price * self.quantity
+            super().save(*args, **kwargs)
+
+        def __str__(self):
+            return f'SKU {self.product.sku} on order {self.order.order_number}'
+
+Contact Form Model structures:
+
+
+        from django.db import models
+        from django.conf import settings
+
+
+        class contact_message(models.Model):
+
+            full_name = models.CharField(max_length=50, null=False, blank=False)
+            email = models.EmailField(max_length=254, null=False, blank=False)
+            message = models.CharField(max_length=254, null=False, blank=False)
+
+All Products Model Structures:
+
+        from django.db import models
+
+
+        class Category(models.Model):
+
+            class Meta:
+                verbose_name_plural = 'Categories'
+
+            name = models.CharField(max_length=254)
+            friendly_name = models.CharField(max_length=254, null=True, blank=True)
+
+            def __str__(self):
+                return self.name
+
+            def get_friendly_name(self):
+                return self.friendly_name
+
+
+        class Product(models.Model):
+            category = models.ForeignKey('Category', null=True, blank=True,
+                                        on_delete=models.SET_NULL)
+            sku = models.CharField(max_length=254, null=True, blank=True)
+            name = models.CharField(max_length=254)
+            description = models.TextField()
+            price = models.DecimalField(max_digits=6, decimal_places=2)
+            rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
+                                        blank=True)
+            image_url = models.URLField(max_length=1024, null=True, blank=True)
+            image = models.ImageField(null=True, blank=True)
+
+            def __str__(self):
+                return self.name
+
+
+        class product_review(models.Model):
+
+            sku = models.CharField(max_length=254, null=True, blank=True)
+            review = models.CharField(max_length=254, null=True, blank=True)
+
+            def __str__(self):
+                return self.review
+
+Profile Page Model Structures:
+
+        from django.db import models
+        from django.contrib.auth.models import User
+        from django.db.models.signals import post_save
+        from django.dispatch import receiver
+
+        from django_countries.fields import CountryField
+
+
+        class UserProfile(models.Model):
+            """
+            A user profile model for maintaining default
+            delivery information and order history
+            """
+            user = models.OneToOneField(User, on_delete=models.CASCADE)
+            default_phone_number = models.CharField(
+                max_length=20, null=True, blank=True)
+            default_street_address1 = models.CharField(
+                max_length=80, null=True, blank=True)
+            default_street_address2 = models.CharField(
+                max_length=80, null=True, blank=True)
+            default_town_or_city = models.CharField(
+                max_length=40, null=True, blank=True)
+            default_county = models.CharField(
+                max_length=80, null=True, blank=True)
+            default_postcode = models.CharField(
+                max_length=20, null=True, blank=True)
+            default_country = CountryField(
+                blank_label='Country', null=True, blank=True)
+
+            def __str__(self):
+                return self.user.username
+
+
+        @receiver(post_save, sender=User)
+        def create_or_update_user_profile(sender, instance, created, **kwargs):
+            """
+            Create or update the user profile
+            """
+            if created:
+                UserProfile.objects.create(user=instance)
+            # Existing users: just save the profile
+            instance.userprofile.save()
+
+
+<br>
+
 <a name="skeleton"></a>
 
 ## 1.3 Skeleton
@@ -270,6 +494,7 @@ In order to stay consistent with the Veggie Guy brand I have chosen a Green them
     * Reply with an email to contact form information
     * Add notes to contact form information
 * Loading javascript between checkout and checkout success
+* Add and link the contact messages to products if the user would like to add something in particular
 
 
 <a name="technologies-used"></a>
@@ -543,19 +768,19 @@ Video
     * python3 manage.py loaddata categories' In this case
     * python3 manage.py loaddata products' In this case
 
-            A note for creating your database if you didn't use fixtures
-            When you come to follow this process for your milestone project, you may not have used a fixtures file to populate your database like the instructor did.
-            If this is the case, manually re-creating your database when you come to deploy can take a considerable amount of time. Thankfully, there is a short process you can follow to download your local mysql database and then upload it to postgres:
-            1. Make sure your manage.py file is connected to your sqlite3 database
-            2. Use this command to backup your current database and load it into a db.json file:
-            ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
-            3. Connect your manage.py file to your postgres database
-            4. Then use this command to load your data from the db.json file into postgres:
-            ./manage.py loaddata db.json
-            If you would like more information on this process along with a few handy tips, have a look at this DevTip on Slack.
-            Video
+<br>
 
+A note for creating your database if you didn't use fixtures
+When you come to follow this process for your milestone project, you may not have used a fixtures file to populate your database like the instructor did.
+If this is the case, manually re-creating your database when you come to deploy can take a considerable amount of time. Thankfully, there is a short process you can follow to download your local mysql database and then upload it to postgres:
+* Make sure your manage.py file is connected to your sqlite3 database
+*  Use this command to backup your current database and load it into a db.json file:
+./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+*  Connect your manage.py file to your postgres database
+*  Then use this command to load your data from the db.json file into postgres:
+./manage.py loaddata db.json
 
+<br>
 
 13. Create a super user to log in with
 
