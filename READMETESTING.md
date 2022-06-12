@@ -34,8 +34,6 @@ Full website testing can be seen below. For the main README cick <a href="https:
 
 * Testing has been based on a minimum size of an iPhone SE and a maximum width of 1440px as per my mentor’s advice. Custom CSS has been created to accommodate multiple screen sizes
 
-* Python Code in the app.py file has been validated by using <a href="http://pep8online.com/" target="_blank">PEP8 Online</a> and the inbuilt problems tracker in GitPod
-
 * HTML code has been validated using <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a>
 
 * CSS code has been validated using <a href="https://jigsaw.w3.org/CSS-validator//" target="_blank">W3C CSS Validation Service</a>
@@ -44,15 +42,15 @@ Full website testing can be seen below. For the main README cick <a href="https:
 
 * Site response has been validated using <a href="http://ami.responsivedesign.is/" target="_blank">Am I Responsive</a>
 
+* The website was sent to my partner and friend for general use/testing
+
 ### iPhone SE
 
-Add image of iphone se here
-
+![index web](static/assets/images/site_images/final_site/phone-screenshot.jpg)
 
 ### 1440p
 
-Add image of 1440p here
-
+![index web](static/assets/images/site_images/final_site/home_final.jpg)
 
 <a name="refactor"></a>
 
@@ -192,18 +190,18 @@ Code and website running as expected as of 05/06/2022 20:21. Happy to add the pr
 ## Navigation Bar
 All Pages:
 
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Page | Expected result | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Home | Pass | Pass | | Pass
-All products | Pass | Pass | | Pass
-Nutrition Plans| Pass | Pass |  | Pass
-Contact| Pass | Pass | | Pass
-Product Management | Pass | Pass | | Pass
-My Profile | Pass | Pass | | Pass
-Log out | Pass | Pass | | Pass
-Log in | Pass | Pass | | Pass
-Register | Pass | Pass | | Pass
-Edit product | Pass | Pass | | Pass
+Home | The link should navigate to the page noted | Pass | | Pass
+All products | The link should navigate to the page noted | Pass | | Pass
+Nutrition Plans| The link should navigate to the page noted | Pass |  | Pass
+Contact| The link should navigate to the page noted | Pass | | Pass
+Product Management | The link should navigate to the page noted | Pass | | Pass
+My Profile | The link should navigate to the page noted | Pass | | Pass
+Log out | The link should navigate to the page noted | Pass | | Pass
+Log in | The link should navigate to the page noted | Pass | | Pass
+Register | The link should navigate to the page noted | Pass | | Pass
+Edit product | The link should navigate to the page noted | Pass | | Pass
 
 
 <br>
@@ -212,24 +210,24 @@ Edit product | Pass | Pass | | Pass
 ## Footer Links
 All Pages:
 
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Page | Expected result | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Home| Pass | Pass | | Pass
-All products | Pass | Pass | | Pass
-Nutrition Plans | Pass | Pass | | Pass
-Exercise Equipement| Pass | Pass | | Pass
-Contact| Pass | Pass | | Pass
-Product Management| Pass | Pass | | Pass
-My Profile| Pass | Pass | | Pass
-Log out| Pass | Pass | | Pass
-Register| Pass | Pass | | Pass
-Edit product| Pass | Pass | | Pass
+Home| The 4 links should open to the specified site | Pass | | Pass
+All products | The 4 links should open to the specified site | Pass | | Pass
+Nutrition Plans | The 4 links should open to the specified site | Pass | | Pass
+Exercise Equipement| The 4 links should open to the specified site | Pass | | Pass
+Contact| The 4 links should open to the specified site | Pass | | Pass
+Product Management| The 4 links should open to the specified site | Pass | | Pass
+My Profile| The 4 links should open to the specified site | Pass | | Pass
+Log out| The 4 links should open to the specified site | Pass | | Pass
+Register| The 4 links should open to the specified site | Pass | | Pass
+Edit product| The 4 links should open to the specified site | Pass | | Pass
 
 <br>
 <br>
 
 ## Home Page
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 Browse all products link should direct to all products page. | Pass | Pass | | Pass
 Browse all nutrition books link should direct to all books page. | Initial fail. Forgot to add categories to url. Now a pass.| Pass | | Pass
@@ -241,9 +239,9 @@ Browse all Exercise Equipment link should direct to all equipment page. | Initia
 
 ## All Products
 
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-All products in admin should show correctly. This includes all associated expected text such as name, price and category.
+All products in admin should show correctly. This includes all associated expected text such as name, price and category. | Pass | Pass | | Pass
 If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
 If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
 Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
@@ -255,9 +253,9 @@ Each of the drop down links should filter or sort by whatever the user selects. 
 <br>
 
 ## Nutrition Plans
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-All products in admin should show correctly. This includes all associated expected text such as name, price and category.
+All products in admin should show correctly. This includes all associated expected text such as name, price and category.| Pass | Pass | | Pass
 If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
 If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
 Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
@@ -268,9 +266,9 @@ Each of the drop down links should filter or sort by whatever the user selects.|
 <br>
 
 ## Exercise Plans
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-All products in admin should show correctly. This includes all associated expected text such as name, price and category.
+All products in admin should show correctly. This includes all associated expected text such as name, price and category.| Pass | Pass | | Pass
 If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
 If a super user is NOT logged in an edit and delete product should NOT be visible. | Pass | Pass | | Pass
 Clicking on a catgory should filter all results for that category. | Pass | Pass | | Pass
@@ -281,7 +279,7 @@ Each of the drop down links should filter or sort by whatever the user selects. 
 <br>
 
 ## Contact
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 The user should be able to fill out a form including name, email and message. | Pass | Pass | | Pass
 The form should not submit if any field is empty.| Pass | Pass | | Pass
@@ -291,7 +289,7 @@ The form should not submit if any field is empty.| Pass | Pass | | Pass
 
 
 ## Product Details
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 The page should load with; the image, the name, the price, the description and any reviews found in the database.| In some cases the image didnt always load. Usually an issue with added products. Suspect it's a file type/size issue as some additional pictures work and some dont. | Pass | | Pass
 If the super user is logged in an edit and delete product should be visible. Both the links should work. | Pass | Pass | | Pass
@@ -307,7 +305,7 @@ The user should be able to submit a review but NOT a blank review.| Pass | Pass 
 <br>
 
 ## Shopping Cart
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 If the cart is empty a cart should display with a keep shopping button. | Pass | Pass | | Pass
 The keep shopping button should take the user to the products page.| Pass | Pass | | Pass
@@ -323,7 +321,7 @@ The secure checkout button should take the user to the checkout page.| Pass | Pa
 <br>
 
 ## Checkout
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 The contents of the shopping cart should display as an order summary in the checkout page. | Pass | Pass | | Pass
 Each of the form fields should allow user input. | Pass | Pass | | Pass
@@ -345,7 +343,7 @@ The User should be able to update their basic default delivery information and c
 <br>
 
 ## Search bar
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 The search bard should display any products with text associated with a database item in a product page. | Pass | Pass | | Fail
 
@@ -353,7 +351,7 @@ The search bard should display any products with text associated with a database
 <br>
 
 ## Product Management
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 This page should allow a SUPER USER ONLY access to add a product. | Pass | Pass | | Pass
 The form should error if a price over 6 digits is added. | Pass | Pass | | Pass
@@ -365,7 +363,7 @@ The user should be able to add an image. | Pass | Pass | | Pass
 <br>
 
 ## Edit Product
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 This page should allow a SUPER USER ONLY access to add a product. | Pass | Pass | | Pass
 The form should display information about the item the user selected to edit. | Pass | Pass | | Pass
@@ -379,7 +377,7 @@ The user should be able to add an image. | Pass | Pass | | Pass
 
 
 ## Register
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 The user should be displayed with a page allowing them to register. | Pass | Pass | | Pass
 
@@ -387,7 +385,7 @@ The user should be displayed with a page allowing them to register. | Pass | Pas
 <br>
 
 ## Login Page
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 The user should be displayed with a page allowing them to log in. | Pass | Pass | | Pass
 
@@ -395,7 +393,7 @@ The user should be displayed with a page allowing them to log in. | Pass | Pass 
 <br>
 
 ## Logout Page
-| Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
+| Expected result | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
 The user should be displayed with a page allowing them to log out. | Pass | Pass | | Pass
 
