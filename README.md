@@ -267,48 +267,62 @@ All Products Model Structures:
 
 Profile Page Model Structures:
 
-        from django.db import models
-        from django.contrib.auth.models import User
-        from django.db.models.signals import post_save
-        from django.dispatch import receiver
+        from django.shortcuts import render, get_object_or_404
+        from django.contrib import messages
 
-        from django_countries.fields import CountryField
+        from .models import UserProfile
+        from .forms import UserProfileForm
 
-
-        class UserProfile(models.Model):
-            """
-            A user profile model for maintaining default
-            delivery information and order history
-            """
-            user = models.OneToOneField(User, on_delete=models.CASCADE)
-            default_phone_number = models.CharField(
-                max_length=20, null=True, blank=True)
-            default_street_address1 = models.CharField(
-                max_length=80, null=True, blank=True)
-            default_street_address2 = models.CharField(
-                max_length=80, null=True, blank=True)
-            default_town_or_city = models.CharField(
-                max_length=40, null=True, blank=True)
-            default_county = models.CharField(
-                max_length=80, null=True, blank=True)
-            default_postcode = models.CharField(
-                max_length=20, null=True, blank=True)
-            default_country = CountryField(
-                blank_label='Country', null=True, blank=True)
-
-            def __str__(self):
-                return self.user.username
+        from checkout.models import Order
 
 
-        @receiver(post_save, sender=User)
-        def create_or_update_user_profile(sender, instance, created, **kwargs):
-            """
-            Create or update the user profile
-            """
-            if created:
-                UserProfile.objects.create(user=instance)
-            # Existing users: just save the profile
-            instance.userprofile.save()
+        def profile(request):
+            """ Display the user's profile. """
+            profile = get_object_or_404(UserProfile, user=request.user)
+
+            if request.method == 'POST':
+                form = UserProfileForm(request.POST, instance=profile)
+                if form.is_valid():
+                    form.save()
+                    messages.success(request, 'Profile updated successfully')
+                else:
+                    messages.error(request, 'Profile update failed.')
+            else:
+                form = UserProfileForm(instance=profile)
+                orders = profile.orders.all()
+
+                template = 'profiles/profile.html'
+                context = {
+                    'form': form,
+                    'orders': orders,
+                    'on_profile_page': True
+                }
+
+            template = 'profiles/profile.html'
+            context = {
+                'form': form,
+                'on_profile_page': True
+            }
+
+            return render(request, template, context)
+
+
+        def order_history(request, order_number):
+            order = get_object_or_404(Order, order_number=order_number)
+
+            messages.info(request, (
+                f'This is a past confirmation for order number {order_number}. '
+                'A confirmation email was sent on the order date.'
+            ))
+
+            template = 'checkout/checkout_success.html'
+            context = {
+                'order': order,
+                'from_profile': True,
+            }
+
+            return render(request, template, context)
+
 
 
 <br>
