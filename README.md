@@ -4,9 +4,11 @@ Welcome to my fourth project. This project is a simple online Fitness Subscripti
 
 This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile. They will also be able to purchase items from the shop. 
 
-A live website can be found <a href="https://the-veggie-guy-fitness.herokuapp.com/" target="_blank">here</a>.
+A live website can be found <a href="https://fitness-app-acvg.onrender.com/" target="_blank">here</a>.
 
 ![index web](static/assets/images/site_images/responsive.jpg)
+
+
 
 # Table of Contents
 
