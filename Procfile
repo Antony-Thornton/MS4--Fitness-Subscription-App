@@ -1,1 +1,0 @@
-web: gunicorn fitness_subscription_app.wsgi:application

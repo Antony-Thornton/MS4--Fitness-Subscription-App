@@ -31,6 +31,11 @@ DEBUG = 'DEVELOPMENT' in os.environ  # False on deployment
 ALLOWED_HOSTS = ['the-veggie-guy-fitness.herokuapp.com', '127.0.0.1', 'localhost']  # noqa: E501
 # Covered in deployment videos
 
+ # Add Render.com URL to allowed hosts
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
 
 # Application definition
 
